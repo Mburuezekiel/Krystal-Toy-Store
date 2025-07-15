@@ -3,6 +3,7 @@ import { Search, ShoppingCart, User, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
+import { Link } from "react-router-dom";
 import {
   Sheet,
   SheetContent,
@@ -16,26 +17,28 @@ export function Navbar() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <h1 className="text-2xl font-bold text-primary">Pamoja Electronics</h1>
+            <Link to="/">
+              <h1 className="text-2xl font-bold text-primary">Pamoja Electronics</h1>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#" className="text-sm font-medium hover:text-primary transition-colors">
+            <Link to="/" className="text-sm font-medium hover:text-primary transition-colors">
               Home
-            </a>
-            <a href="#" className="text-sm font-medium hover:text-primary transition-colors">
+            </Link>
+            <Link to="/products" className="text-sm font-medium hover:text-primary transition-colors">
               Products
-            </a>
-            <a href="#" className="text-sm font-medium hover:text-primary transition-colors">
+            </Link>
+            <Link to="/categories" className="text-sm font-medium hover:text-primary transition-colors">
               Categories
-            </a>
-            <a href="#" className="text-sm font-medium hover:text-primary transition-colors">
+            </Link>
+            <Link to="/about" className="text-sm font-medium hover:text-primary transition-colors">
               About
-            </a>
-            <a href="#" className="text-sm font-medium hover:text-primary transition-colors">
+            </Link>
+            <Link to="/contact" className="text-sm font-medium hover:text-primary transition-colors">
               Contact
-            </a>
+            </Link>
           </nav>
 
           {/* Search Bar */}
@@ -73,21 +76,21 @@ export function Navbar() {
               </SheetTrigger>
               <SheetContent side="right">
                 <nav className="flex flex-col space-y-4 mt-8">
-                  <a href="#" className="text-lg font-medium hover:text-primary transition-colors">
+                  <Link to="/" className="text-lg font-medium hover:text-primary transition-colors">
                     Home
-                  </a>
-                  <a href="#" className="text-lg font-medium hover:text-primary transition-colors">
+                  </Link>
+                  <Link to="/products" className="text-lg font-medium hover:text-primary transition-colors">
                     Products
-                  </a>
-                  <a href="#" className="text-lg font-medium hover:text-primary transition-colors">
+                  </Link>
+                  <Link to="/categories" className="text-lg font-medium hover:text-primary transition-colors">
                     Categories
-                  </a>
-                  <a href="#" className="text-lg font-medium hover:text-primary transition-colors">
+                  </Link>
+                  <Link to="/about" className="text-lg font-medium hover:text-primary transition-colors">
                     About
-                  </a>
-                  <a href="#" className="text-lg font-medium hover:text-primary transition-colors">
+                  </Link>
+                  <Link to="/contact" className="text-lg font-medium hover:text-primary transition-colors">
                     Contact
-                  </a>
+                  </Link>
                 </nav>
               </SheetContent>
             </Sheet>
