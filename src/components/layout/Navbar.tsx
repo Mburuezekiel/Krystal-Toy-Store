@@ -55,17 +55,21 @@ export function Navbar() {
           {/* Actions */}
           <div className="flex items-center space-x-4">
             {/* Cart */}
-            <Button variant="ghost" size="icon" className="relative">
-              <ShoppingCart className="h-5 w-5" />
-              <Badge className="absolute -top-2 -right-2 h-5 w-5 rounded-full p-0 flex items-center justify-center text-xs">
-                0
-              </Badge>
-            </Button>
+            <Link to="/cart">
+              <Button variant="ghost" size="icon" className="relative">
+                <ShoppingCart className="h-5 w-5" />
+                <Badge className="absolute -top-2 -right-2 h-5 w-5 rounded-full p-0 flex items-center justify-center text-xs">
+                  3
+                </Badge>
+              </Button>
+            </Link>
 
             {/* User Account */}
-            <Button variant="ghost" size="icon">
-              <User className="h-5 w-5" />
-            </Button>
+            <Link to="/profile">
+              <Button variant="ghost" size="icon">
+                <User className="h-5 w-5" />
+              </Button>
+            </Link>
 
             {/* Mobile Menu */}
             <Sheet>
@@ -90,6 +94,12 @@ export function Navbar() {
                   </Link>
                   <Link to="/contact" className="text-lg font-medium hover:text-primary transition-colors">
                     Contact
+                  </Link>
+                  <Link to="/cart" className="text-lg font-medium hover:text-primary transition-colors">
+                    Cart
+                  </Link>
+                  <Link to="/profile" className="text-lg font-medium hover:text-primary transition-colors">
+                    Profile
                   </Link>
                 </nav>
               </SheetContent>
