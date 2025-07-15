@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { Search, Filter, Grid, List } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -8,10 +8,13 @@ import { Badge } from "@/components/ui/badge";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { Link } from "react-router-dom";
 
 const Products = () => {
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
   const [searchTerm, setSearchTerm] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [sortBy, setSortBy] = useState("name");
 
   const products = [
     {
@@ -20,7 +23,7 @@ const Products = () => {
       price: 120000,
       originalPrice: 135000,
       image: "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=400&q=80",
-      category: "Smartphones",
+      category: "smartphones",
       rating: 4.8,
       inStock: true
     },
@@ -29,7 +32,7 @@ const Products = () => {
       name: "Samsung Galaxy S24",
       price: 95000,
       image: "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=400&q=80",
-      category: "Smartphones",
+      category: "smartphones",
       rating: 4.7,
       inStock: true
     },
@@ -38,7 +41,7 @@ const Products = () => {
       name: "MacBook Pro M3",
       price: 180000,
       image: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80",
-      category: "Laptops",
+      category: "laptops",
       rating: 4.9,
       inStock: false
     },
@@ -47,7 +50,7 @@ const Products = () => {
       name: "Sony WH-1000XM5",
       price: 35000,
       image: "https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&w=400&q=80",
-      category: "Audio",
+      category: "audio",
       rating: 4.6,
       inStock: true
     },
@@ -56,7 +59,7 @@ const Products = () => {
       name: "iPad Air",
       price: 85000,
       image: "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=400&q=80",
-      category: "Tablets",
+      category: "tablets",
       rating: 4.5,
       inStock: true
     },
@@ -65,15 +68,36 @@ const Products = () => {
       name: "Dell XPS 13",
       price: 125000,
       image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=400&q=80",
-      category: "Laptops",
+      category: "laptops",
       rating: 4.4,
       inStock: true
     }
   ];
 
-  const filteredProducts = products.filter(product =>
-    product.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const filteredAndSortedProducts = useMemo(() => {
+    let filtered = products.filter(product => {
+      const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesCategory = selectedCategory === "all" || product.category === selectedCategory;
+      return matchesSearch && matchesCategory;
+    });
+
+    // Sort products
+    filtered.sort((a, b) => {
+      switch (sortBy) {
+        case "price-low":
+          return a.price - b.price;
+        case "price-high":
+          return b.price - a.price;
+        case "rating":
+          return b.rating - a.rating;
+        case "name":
+        default:
+          return a.name.localeCompare(b.name);
+      }
+    });
+
+    return filtered;
+  }, [searchTerm, selectedCategory, sortBy]);
 
   return (
     <div className="min-h-screen bg-background">
@@ -100,7 +124,7 @@ const Products = () => {
           </div>
           
           <div className="flex gap-2">
-            <Select>
+            <Select value={selectedCategory} onValueChange={setSelectedCategory}>
               <SelectTrigger className="w-40">
                 <SelectValue placeholder="Category" />
               </SelectTrigger>
@@ -113,7 +137,7 @@ const Products = () => {
               </SelectContent>
             </Select>
 
-            <Select>
+            <Select value={sortBy} onValueChange={setSortBy}>
               <SelectTrigger className="w-40">
                 <SelectValue placeholder="Sort by" />
               </SelectTrigger>
@@ -152,54 +176,67 @@ const Products = () => {
 
         {/* Products Grid */}
         <div className={`grid gap-6 ${viewMode === "grid" ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" : "grid-cols-1"}`}>
-          {filteredProducts.map((product) => (
-            <Card key={product.id} className="group hover:shadow-lg transition-shadow">
-              <CardContent className="p-4">
-                <div className="aspect-square mb-4 overflow-hidden rounded-lg bg-muted">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <Badge variant="secondary" className="text-xs">
-                    {product.category}
-                  </Badge>
-                  <h3 className="font-semibold">{product.name}</h3>
-                  <div className="flex items-center gap-2">
-                    <span className="text-lg font-bold text-primary">
-                      KSh {product.price.toLocaleString()}
-                    </span>
-                    {product.originalPrice && (
-                      <span className="text-sm text-muted-foreground line-through">
-                        KSh {product.originalPrice.toLocaleString()}
+          {filteredAndSortedProducts.map((product) => (
+            <Link key={product.id} to={`/products/${product.id}`}>
+              <Card className="group hover:shadow-lg transition-shadow">
+                <CardContent className="p-4">
+                  <div className="aspect-square mb-4 overflow-hidden rounded-lg bg-muted">
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Badge variant="secondary" className="text-xs">
+                      {product.category}
+                    </Badge>
+                    <h3 className="font-semibold">{product.name}</h3>
+                    <div className="flex items-center gap-2">
+                      <span className="text-lg font-bold text-primary">
+                        KSh {product.price.toLocaleString()}
                       </span>
-                    )}
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <div className="flex">
-                      {[...Array(5)].map((_, i) => (
-                        <span key={i} className={`text-xs ${i < Math.floor(product.rating) ? "text-primary" : "text-muted-foreground"}`}>
-                          ★
+                      {product.originalPrice && (
+                        <span className="text-sm text-muted-foreground line-through">
+                          KSh {product.originalPrice.toLocaleString()}
                         </span>
-                      ))}
+                      )}
                     </div>
-                    <span className="text-xs text-muted-foreground">({product.rating})</span>
+                    <div className="flex items-center gap-1">
+                      <div className="flex">
+                        {[...Array(5)].map((_, i) => (
+                          <span key={i} className={`text-xs ${i < Math.floor(product.rating) ? "text-primary" : "text-muted-foreground"}`}>
+                            ★
+                          </span>
+                        ))}
+                      </div>
+                      <span className="text-xs text-muted-foreground">({product.rating})</span>
+                    </div>
                   </div>
-                </div>
-              </CardContent>
-              <CardFooter className="p-4 pt-0">
-                <Button 
-                  className="w-full" 
-                  disabled={!product.inStock}
-                >
-                  {product.inStock ? "Add to Cart" : "Out of Stock"}
-                </Button>
-              </CardFooter>
-            </Card>
+                </CardContent>
+                <CardFooter className="p-4 pt-0">
+                  <Button 
+                    className="w-full" 
+                    disabled={!product.inStock}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      console.log('Added to cart');
+                    }}
+                  >
+                    {product.inStock ? "Add to Cart" : "Out of Stock"}
+                  </Button>
+                </CardFooter>
+              </Card>
+            </Link>
           ))}
         </div>
+
+        {filteredAndSortedProducts.length === 0 && (
+          <div className="text-center py-12">
+            <p className="text-muted-foreground">No products found matching your criteria.</p>
+          </div>
+        )}
       </main>
       <Footer />
     </div>
