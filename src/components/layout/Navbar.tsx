@@ -97,7 +97,7 @@ const Navbar: React.FC = () => {
                 <div className="ml-3 flex flex-col leading-none">
                   <span 
                     className="text-2xl font-black text-transparent bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text tracking-tight transform transition-all duration-300 group-hover:scale-105"
-                    style={{ fontFamily: "'Fredoka One', cursive" }}
+                    style={{ fontFamily: "Fredoka One" }}
                   >
                     Krystal
                   </span>
