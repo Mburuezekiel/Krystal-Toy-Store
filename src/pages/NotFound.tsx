@@ -18,7 +18,7 @@ const NotFound = () => {
         <Frown size={64} className="mx-auto text-pink-500 mb-4" />
         <h1
           className="text-5xl font-black text-transparent bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text mb-2 drop-shadow-lg"
-          style={{ fontFamily: "'Fredoka One', cursive" }}
+          style={{ fontFamily: "'Fredoka One'" }}
         >
           404 - Page Not Found
         </h1>
@@ -28,7 +28,7 @@ const NotFound = () => {
         <Link
           to="/"
           className="inline-flex items-center justify-center py-3 px-6 rounded-full text-white font-bold shadow-lg transition-all duration-300 hover:scale-105 bg-gradient-to-r from-green-500 to-green-500 hover:from-green-600 hover:to-blue-600"
-          style={{ fontFamily: "'Fredoka One', cursive" }}
+          style={{ fontFamily: "'Fredoka One'" }}
         >
           Return to  Home Page
         </Link>

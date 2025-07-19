@@ -16,7 +16,7 @@ const ForgotPassword = () => {
         <div className="text-center">
           <h1
             className="text-3xl font-bold text-gray-900 mb-2"
-            style={{ fontFamily: "'Fredoka One', cursive" }}
+            style={{ fontFamily: "'Fredoka One'" }}
           >
             Forgot Your Password?
           </h1>
@@ -44,7 +44,7 @@ const ForgotPassword = () => {
                 required
                 className="w-full pl-10 pr-3 py-2 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 border-pink-200 transition-colors"
                 placeholder="Enter your email address"
-                style={{ fontFamily: "'Fredoka One', cursive" }}
+                style={{ fontFamily: "'Fredoka One'" }}
               />
               <Mail
                 size={20}
@@ -55,7 +55,7 @@ const ForgotPassword = () => {
           <Button
             type="submit"
             className="w-full py-2.5 text-white font-bold rounded-full px-8 shadow-lg transition-all duration-300 hover:scale-105 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600"
-            style={{ fontFamily: "'Fredoka One', cursive" }}
+            style={{ fontFamily: "'Fredoka One'" }}
           >
             Send Reset Link
           </Button>

@@ -103,7 +103,7 @@ const Navbar: React.FC = () => {
                   </span>
                   <span 
                     className="text-xs font-bold text-gray-600 tracking-widest uppercase mt-0.5 transform transition-all duration-300 group-hover:text-purple-500"
-                    style={{ fontFamily: "'Fredoka One', cursive" }}
+                    style={{ fontFamily: "'Fredoka One',cursive" }}
                   >
                     Toy Store
                   </span>
@@ -121,7 +121,7 @@ const Navbar: React.FC = () => {
                     key={item.name}
                     href={item.href}
                     className="group flex items-center space-x-2 px-4 py-2 text-gray-700 hover:text-white bg-transparent hover:bg-gradient-to-r hover:from-pink-500 hover:to-purple-600 rounded-full transition-all duration-300 font-medium hover:shadow-lg transform hover:scale-105"
-                    style={{ fontFamily: "'Fredoka One', cursive" }}
+                    style={{ fontFamily: "'Fredoka One'" }}
                   >
                     <IconComponent className="h-4 w-4 group-hover:animate-bounce" />
                     <span>{item.name}</span>
@@ -143,7 +143,7 @@ const Navbar: React.FC = () => {
                     }
                   }}
                   className="w-full pl-12 pr-4 py-3 border-2 border-pink-200 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-300 bg-pink-50/50 group-hover:bg-white group-hover:shadow-md"
-                  style={{ fontFamily: "'Fredoka One', cursive" }}
+                  style={{ fontFamily: "'Fredoka One'" }}
                 />
                 <Search className="absolute left-4 top-3.5 h-5 w-5 text-pink-400 cursor-pointer hover:text-purple-500 transition-colors" onClick={handleSearch} />
                 <div className="absolute inset-0 bg-gradient-to-r from-pink-500/20 to-purple-500/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
@@ -163,7 +163,7 @@ const Navbar: React.FC = () => {
               <a href="/auth/login">
                 <Button 
                   className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold rounded-full px-6 py-3 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
-                  style={{ fontFamily: "'Fredoka One', cursive" }}
+                  style={{ fontFamily: "'Fredoka One'" }}
                 >
                   <User size={16} className="mr-2" />
                   Login
@@ -194,7 +194,7 @@ const Navbar: React.FC = () => {
                       }
                     }}
                     className="w-full pl-10 pr-4 py-3 border-2 border-pink-200 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white shadow-sm"
-                    style={{ fontFamily: "'Fredoka One', cursive" }}
+                    style={{ fontFamily: "'Fredoka One'" }}
                   />
                   <Search className="absolute left-3 top-3.5 h-5 w-5 text-pink-400" />
                 </div>
@@ -209,7 +209,7 @@ const Navbar: React.FC = () => {
                       href={item.href}
                       className="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:text-purple-600 hover:bg-white rounded-xl transition-all duration-300 font-medium shadow-sm hover:shadow-md"
                       onClick={() => setIsMenuOpen(false)}
-                      style={{ fontFamily: "'Fredoka One', cursive" }}
+                      style={{ fontFamily: "'Fredoka One'" }}
                     >
                       <IconComponent className="h-5 w-5" />
                       <span>{item.name}</span>
@@ -226,12 +226,12 @@ const Navbar: React.FC = () => {
                       {cartCount}
                     </span>
                   </div>
-                  <span style={{ fontFamily: "'Fredoka One', cursive" }}>Cart</span>
+                  <span style={{ fontFamily: "'Fredoka One'" }}>Cart</span>
                 </a>
                 <a href="/auth/login">
                   <Button 
                     className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold rounded-full px-6 py-2"
-                    style={{ fontFamily: "'Fredoka One', cursive" }}
+                    style={{ fontFamily: "'Fredoka One'" }}
                   >
                     Login
                   </Button>

@@ -132,7 +132,7 @@ const Products = () => {
         <div className="mb-10 text-center">
           <h1
             className="text-5xl font-black text-transparent bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text mb-4 drop-shadow-lg"
-            style={{ fontFamily: "'Fredoka One', cursive" }}
+            style={{ fontFamily: "'Fredoka One'" }}
           >
             Our Toy Collection
           </h1>
@@ -150,7 +150,7 @@ const Products = () => {
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="pl-12 pr-4 py-3 border-2 border-pink-200 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-300 bg-white/80 group-hover:bg-white shadow-md"
-                style={{ fontFamily: "'Fredoka One', cursive" }}
+                style={{ fontFamily: "'Fredoka One'" }}
               />
             </div>
           </div>
@@ -228,14 +228,14 @@ const Products = () => {
                     </Badge>
                     <h3
                       className="font-bold text-xl text-gray-900 group-hover:text-purple-700 transition-colors"
-                      style={{ fontFamily: "'Fredoka One', cursive" }}
+                      style={{ fontFamily: "'Fredoka One'" }}
                     >
                       {product.name}
                     </h3>
                     <div className="flex items-center gap-2">
                       <span
                         className="text-2xl font-black text-purple-600"
-                        style={{ fontFamily: "'Fredoka One', cursive" }}
+                        style={{ fontFamily: "'Fredoka One'" }}
                       >
                         KSh {product.price.toLocaleString()}
                       </span>
@@ -270,7 +270,7 @@ const Products = () => {
                             console.log(`Added "${product.name}" to Play Cart!`);
                         }
                     }}
-                    style={{ fontFamily: "'Fredoka One', cursive" }}
+                    style={{ fontFamily: "'Fredoka One'" }}
                   >
                     {product.inStock ? (
                       <>
@@ -289,7 +289,7 @@ const Products = () => {
 
         {filteredAndSortedProducts.length === 0 && (
           <div className="text-center py-12">
-            <p className="text-gray-600 text-lg" style={{ fontFamily: "'Fredoka One', cursive" }}>
+            <p className="text-gray-600 text-lg" style={{ fontFamily: "'Fredoka One'" }}>
               Oops! No magical toys found matching your quest. Try a different spell!
             </p>
           </div>

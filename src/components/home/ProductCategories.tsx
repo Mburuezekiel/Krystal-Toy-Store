@@ -40,7 +40,7 @@ export function ProductCategories() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2
           className="text-4xl font-bold text-gray-900 text-center mb-12 drop-shadow-md"
-          style={{ fontFamily: "'Fredoka One', cursive" }}
+          style={{ fontFamily: "'Fredoka One'" }}
         >
           Explore Toy Categories
         </h2>
@@ -60,7 +60,7 @@ export function ProductCategories() {
                 </div>
                 <h3
                   className="font-bold text-lg text-gray-800 group-hover:text-purple-600 transition-colors"
-                  style={{ fontFamily: "'Fredoka One', cursive" }}
+                  style={{ fontFamily: "'Fredoka One'" }}
                 >
                   {category.name}
                 </h3>

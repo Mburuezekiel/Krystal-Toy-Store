@@ -60,7 +60,7 @@ export function FeaturedProducts() {
           <div>
             <h2
               className="text-4xl font-bold text-gray-900 mb-4 drop-shadow-md"
-              style={{ fontFamily: "'Fredoka One', cursive" }}
+              style={{ fontFamily: "'Fredoka One'" }}
             >
               Our Star Toys!
             </h2>
@@ -72,7 +72,7 @@ export function FeaturedProducts() {
             <Button
               variant="default"
               className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold rounded-full px-8 py-3 shadow-lg transition-all duration-300 hover:scale-105"
-              style={{ fontFamily: "'Fredoka One', cursive" }}
+              style={{ fontFamily: "'Fredoka One'" }}
             >
               <Gift className="h-5 w-5 mr-2" /> View All  Toys
             </Button>
@@ -117,7 +117,7 @@ export function FeaturedProducts() {
                   <div className="p-4 space-y-3">
                     <h3
                       className="font-bold text-xl text-gray-900 group-hover:text-purple-700 transition-colors"
-                      style={{ fontFamily: "'Fredoka One', cursive" }}
+                      style={{ fontFamily: "'Fredoka One'" }}
                     >
                       {product.name}
                     </h3>
@@ -135,7 +135,7 @@ export function FeaturedProducts() {
                     <div className="flex items-center space-x-2">
                       <span
                         className="text-2xl font-black "
-                        style={{ fontFamily: "'Fredoka One', cursive" }}
+                        style={{ fontFamily: "'Fredoka One'" }}
                       >
                         {product.price}
                       </span>
@@ -151,7 +151,7 @@ export function FeaturedProducts() {
                         e.stopPropagation();
                         console.log('Added to cart');
                       }}
-                      style={{ fontFamily: "'Fredoka One', cursive" }}
+                      style={{ fontFamily: "'Fredoka One'" }}
                     >
                       <ShoppingCart className="h-5 w-5 mr-2 transition-transform group-hover/btn:scale-110" />
                       Add to  Cart!

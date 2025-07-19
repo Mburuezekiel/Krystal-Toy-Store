@@ -82,7 +82,7 @@ const About = () => {
             <div className="max-w-4xl mx-auto text-center">
               <h1
                 className="text-5xl md:text-6xl font-black text-transparent bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text mb-6 drop-shadow-lg"
-                style={{ fontFamily: "'Fredoka One', cursive" }}
+                style={{ fontFamily: "'Fredoka One'" }}
               >
                 About Krystal Toy Store
               </h1>
@@ -93,7 +93,7 @@ const About = () => {
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white font-bold rounded-full px-8 py-4 shadow-lg transition-all duration-300 hover:scale-105"
-                style={{ fontFamily: "'Fredoka One', cursive" }}
+                style={{ fontFamily: "'Fredoka One'" }}
               >
                 Contact Us
               </Button>
@@ -109,7 +109,7 @@ const About = () => {
               <div>
                 <h2
                   className="text-4xl font-bold text-gray-900 mb-6"
-                  style={{ fontFamily: "'Fredoka One', cursive" }}
+                  style={{ fontFamily: "'Fredoka One'" }}
                 >
                   Our History
                 </h2>
@@ -143,7 +143,7 @@ const About = () => {
             <div className="text-center mb-12">
               <h2
                 className="text-4xl font-bold text-gray-900 mb-4"
-                style={{ fontFamily: "'Fredoka One', cursive" }}
+                style={{ fontFamily: "'Fredoka One'" }}
               >
                 Our Core Values
               </h2>
@@ -162,7 +162,7 @@ const About = () => {
                       </div>
                       <h3
                         className="font-bold text-xl text-gray-900 mb-2"
-                        style={{ fontFamily: "'Fredoka One', cursive" }}
+                        style={{ fontFamily: "'Fredoka One'" }}
                       >
                         {value.title}
                       </h3>
@@ -181,7 +181,7 @@ const About = () => {
             <div className="text-center mb-12">
               <h2
                 className="text-4xl font-bold text-gray-900 mb-4"
-                style={{ fontFamily: "'Fredoka One', cursive" }}
+                style={{ fontFamily: "'Fredoka One'" }}
               >
                 Meet Our Team
               </h2>
@@ -203,7 +203,7 @@ const About = () => {
                     </div>
                     <h3
                       className="font-bold text-xl text-purple-700 mb-1"
-                      style={{ fontFamily: "'Fredoka One', cursive" }}
+                      style={{ fontFamily: "'Fredoka One'" }}
                     >
                       {member.name}
                     </h3>
@@ -223,7 +223,7 @@ const About = () => {
               <div>
                 <div
                   className="text-4xl md:text-5xl font-black mb-2 drop-shadow-lg"
-                  style={{ fontFamily: "'Fredoka One', cursive" }}
+                  style={{ fontFamily: "'Fredoka One'" }}
                 >
                   10,000+
                 </div>
@@ -232,7 +232,7 @@ const About = () => {
               <div>
                 <div
                   className="text-4xl md:text-5xl font-black mb-2 drop-shadow-lg"
-                  style={{ fontFamily: "'Fredoka One', cursive" }}
+                  style={{ fontFamily: "'Fredoka One'" }}
                 >
                   500+
                 </div>
@@ -241,7 +241,7 @@ const About = () => {
               <div>
                 <div
                   className="text-4xl md:text-5xl font-black mb-2 drop-shadow-lg"
-                  style={{ fontFamily: "'Fredoka One', cursive" }}
+                  style={{ fontFamily: "'Fredoka One'" }}
                 >
                   6
                 </div>
@@ -250,7 +250,7 @@ const About = () => {
               <div>
                 <div
                   className="text-4xl md:text-5xl font-black mb-2 drop-shadow-lg"
-                  style={{ fontFamily: "'Fredoka One', cursive" }}
+                  style={{ fontFamily: "'Fredoka One'" }}
                 >
                   47
                 </div>

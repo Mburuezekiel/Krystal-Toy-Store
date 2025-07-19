@@ -23,7 +23,7 @@ export function Footer() {
           <div className="space-y-6">
             <h3
               className="text-4xl font-black text-transparent bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text drop-shadow-md"
-              style={{ fontFamily: "'Fredoka One', cursive" }}
+              style={{ fontFamily: "'Fredoka One'" }}
             >
               Krystal Toy Store
             </h3>
@@ -49,7 +49,7 @@ export function Footer() {
           <div className="space-y-4">
             <h4
               className="font-extrabold text-xl text-gray-800"
-              style={{ fontFamily: "'Fredoka One', cursive" }}
+              style={{ fontFamily: "'Fredoka One'" }}
             >
              Quick Links
             </h4>
@@ -75,7 +75,7 @@ export function Footer() {
           <div className="space-y-4">
             <h4
               className="font-extrabold text-xl text-gray-800"
-              style={{ fontFamily: "'Fredoka One', cursive" }}
+              style={{ fontFamily: "'Fredoka One'" }}
             >
               Adventure Map
             </h4>
@@ -101,7 +101,7 @@ export function Footer() {
           <div className="space-y-4">
             <h4
               className="font-extrabold text-xl text-gray-800"
-              style={{ fontFamily: "'Fredoka One', cursive" }}
+              style={{ fontFamily: "'Fredoka One'" }}
             >
               Contact Us
             </h4>
@@ -129,11 +129,11 @@ export function Footer() {
                 <Input
                   placeholder=" Enter your email"
                   className="flex-1 rounded-full px-4 py-2 border-2 border-pink-200 focus:border-purple-500 focus:ring-purple-500 shadow-sm"
-                  style={{ fontFamily: "'Fredoka One', cursive" }}
+                  style={{ fontFamily: "'Fredoka One'" }}
                 />
                 <Button
                   className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold rounded-full px-6 py-3 shadow-lg transition-all duration-300 hover:scale-105"
-                  style={{ fontFamily: "'Fredoka One', cursive" }}
+                  style={{ fontFamily: "'Fredoka One'" }}
                 >
                   Subscribe
                 </Button>

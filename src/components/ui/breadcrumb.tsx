@@ -23,12 +23,12 @@ export const Breadcrumbs: React.FC = () => {
     'checkout': 'Checkout',
     'profile': 'Profile',
 
-    
+
   };
 
   return (
     <nav className="flex items-center space-x-2 text-sm font-medium text-gray-600 mb-6 px-4">
-      <Link to="/" className="hover:text-purple-600 transition-colors" style={{ fontFamily: "'Fredoka One', cursive" }}>
+      <Link to="/" className="hover:text-purple-600 transition-colors" style={{ fontFamily: "'Fredoka One'" }}>
         Home
       </Link>
       {pathnames.map((value, index) => {
@@ -40,9 +40,9 @@ export const Breadcrumbs: React.FC = () => {
           <React.Fragment key={to}>
             <ChevronRight className="h-4 w-4 text-pink-400" />
             {last ? (
-              <span className="text-purple-700" style={{ fontFamily: "'Fredoka One', cursive" }}>{displayName}</span>
+              <span className="text-purple-700" style={{ fontFamily: "'Fredoka One'" }}>{displayName}</span>
             ) : (
-              <Link to={to} className="hover:text-purple-600 transition-colors" style={{ fontFamily: "'Fredoka One', cursive" }}>
+              <Link to={to} className="hover:text-purple-600 transition-colors" style={{ fontFamily: "'Fredoka One'" }}>
                 {displayName}
               </Link>
             )}

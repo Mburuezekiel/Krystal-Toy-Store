@@ -138,17 +138,17 @@ const Checkout = () => {
         <Card className="max-w-md w-full p-8 bg-white rounded-2xl shadow-xl space-y-6 border-2 border-green-300">
           <CardHeader>
             <PartyPopper className="h-20 w-20 mx-auto text-green-500 animate-bounce-in" />
-            <CardTitle className="text-4xl font-bold text-gray-900" style={{ fontFamily: "'Fredoka One', cursive" }}>
+            <CardTitle className="text-4xl font-bold text-gray-900" style={{ fontFamily: "'Fredoka One'" }}>
               Order Placed!
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             <p className="text-lg text-gray-700">Your   order has been successfully placed!</p>
             <p className="text-md text-gray-600">A confirmation email with your order details is on its way.</p>
-            <Button asChild className="w-full bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white font-bold rounded-full px-8 py-3 shadow-lg transition-all duration-300 hover:scale-105" style={{ fontFamily: "'Fredoka One', cursive" }}>
+            <Button asChild className="w-full bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white font-bold rounded-full px-8 py-3 shadow-lg transition-all duration-300 hover:scale-105" style={{ fontFamily: "'Fredoka One'" }}>
               <Link to="/toys">Continue Shopping</Link>
             </Button>
-            <Button asChild variant="outline" className="w-full border-purple-200 text-purple-700 hover:bg-purple-50 rounded-full font-bold" style={{ fontFamily: "'Fredoka One', cursive" }}>
+            <Button asChild variant="outline" className="w-full border-purple-200 text-purple-700 hover:bg-purple-50 rounded-full font-bold" style={{ fontFamily: "'Fredoka One'" }}>
               <Link to="profile/orders">View My Orders</Link>
             </Button>
           </CardContent>
@@ -161,11 +161,11 @@ const Checkout = () => {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-pink-50">
       <main className="container mx-auto px-4 py-8">
         <div className="mb-8">
-          <Link to="/cart" className="inline-flex items-center text-gray-700 hover:text-purple-600 transition-colors mb-4 font-medium" style={{ fontFamily: "'Fredoka One', cursive" }}>
+          <Link to="/cart" className="inline-flex items-center text-gray-700 hover:text-purple-600 transition-colors mb-4 font-medium" style={{ fontFamily: "'Fredoka One'" }}>
             <ArrowLeft className="h-4 w-4 mr-2" />
             Back to Your  Cart
           </Link>
-          <h1 className="text-4xl font-black text-transparent bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text mb-2 drop-shadow-lg" style={{ fontFamily: "'Fredoka One', cursive" }}>
+          <h1 className="text-4xl font-black text-transparent bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text mb-2 drop-shadow-lg" style={{ fontFamily: "'Fredoka One'" }}>
              Checkout
           </h1>
           <p className="text-gray-700 text-lg">
@@ -176,12 +176,12 @@ const Checkout = () => {
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="grid lg:grid-cols-2 gap-8">
             <div className="space-y-6">
-              <span className="text-3xl font-bold text-gray-900 mb-4" style={{ fontFamily: "'Fredoka One', cursive" }}>Billing details</span>
+              <span className="text-3xl font-bold text-gray-900 mb-4" style={{ fontFamily: "'Fredoka One'" }}>Billing details</span>
               
               <Card className="rounded-2xl shadow-lg border-2 border-orange-100 bg-white">
                 
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-2 text-2xl font-bold text-gray-900" style={{ fontFamily: "'Fredoka One', cursive" }}>
+                  <CardTitle className="flex items-center gap-2 text-2xl font-bold text-gray-900" style={{ fontFamily: "'Fredoka One'" }}>
                     <span className="bg-purple-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold">1</span>
                     Your  Details
                   </CardTitle>
@@ -195,7 +195,7 @@ const Checkout = () => {
                         <FormItem>
                           <FormLabel>First Name</FormLabel>
                           <FormControl>
-                            <Input placeholder="John" {...field} className="border-2 border-pink-200 rounded-lg focus:border-purple-500" style={{ fontFamily: "'Fredoka One', cursive" }} />
+                            <Input placeholder="John" {...field} className="border-2 border-pink-200 rounded-lg focus:border-purple-500" style={{ fontFamily: "'Fredoka One'" }} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -208,7 +208,7 @@ const Checkout = () => {
                         <FormItem>
                           <FormLabel>Last Name</FormLabel>
                           <FormControl>
-                            <Input placeholder="Doe" {...field} className="border-2 border-pink-200 rounded-lg focus:border-purple-500" style={{ fontFamily: "'Fredoka One', cursive" }} />
+                            <Input placeholder="Doe" {...field} className="border-2 border-pink-200 rounded-lg focus:border-purple-500" style={{ fontFamily: "'Fredoka One'" }} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -222,7 +222,7 @@ const Checkout = () => {
                       <FormItem>
                         <FormLabel>Email</FormLabel>
                         <FormControl>
-                          <Input type="email" placeholder="john@example.com" {...field} className="border-2 border-pink-200 rounded-lg focus:border-purple-500" style={{ fontFamily: "'Fredoka One', cursive" }} />
+                          <Input type="email" placeholder="john@example.com" {...field} className="border-2 border-pink-200 rounded-lg focus:border-purple-500" style={{ fontFamily: "'Fredoka One'" }} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -235,7 +235,7 @@ const Checkout = () => {
                       <FormItem>
                         <FormLabel>Phone Number (Optional)</FormLabel>
                         <FormControl>
-                          <Input placeholder="+254 7XX XXX XXX" {...field} className="border-2 border-pink-200 rounded-lg focus:border-purple-500" style={{ fontFamily: "'Fredoka One', cursive" }} />
+                          <Input placeholder="+254 7XX XXX XXX" {...field} className="border-2 border-pink-200 rounded-lg focus:border-purple-500" style={{ fontFamily: "'Fredoka One'" }} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -246,7 +246,7 @@ const Checkout = () => {
 
               <Card className="rounded-2xl shadow-lg border-2 border-blue-100 bg-white">
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-2 text-2xl font-bold text-gray-900" style={{ fontFamily: "'Fredoka One', cursive" }}>
+                  <CardTitle className="flex items-center gap-2 text-2xl font-bold text-gray-900" style={{ fontFamily: "'Fredoka One'" }}>
                     <span className="bg-purple-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold">2</span>
                      Delivery Spot
                   </CardTitle>
@@ -259,7 +259,7 @@ const Checkout = () => {
                       <FormItem>
                         <FormLabel>Street Address</FormLabel>
                         <FormControl>
-                          <Input placeholder="123 Playtime Lane" {...field} className="border-2 border-pink-200 rounded-lg focus:border-purple-500" style={{ fontFamily: "'Fredoka One', cursive" }} />
+                          <Input placeholder="123 Playtime Lane" {...field} className="border-2 border-pink-200 rounded-lg focus:border-purple-500" style={{ fontFamily: "'Fredoka One'" }} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -273,7 +273,7 @@ const Checkout = () => {
                         <FormItem>
                           <FormLabel>City</FormLabel>
                           <FormControl>
-                            <Input placeholder="Nairobi" {...field} className="border-2 border-pink-200 rounded-lg focus:border-purple-500" style={{ fontFamily: "'Fredoka One', cursive" }} />
+                            <Input placeholder="Nairobi" {...field} className="border-2 border-pink-200 rounded-lg focus:border-purple-500" style={{ fontFamily: "'Fredoka One'" }} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -286,7 +286,7 @@ const Checkout = () => {
                         <FormItem>
                           <FormLabel>County / Region</FormLabel>
                           <FormControl>
-                            <Input placeholder="Muranga County" {...field} className="border-2 border-pink-200 rounded-lg focus:border-purple-500" style={{ fontFamily: "'Fredoka One', cursive" }} />
+                            <Input placeholder="Muranga County" {...field} className="border-2 border-pink-200 rounded-lg focus:border-purple-500" style={{ fontFamily: "'Fredoka One'" }} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -301,7 +301,7 @@ const Checkout = () => {
                         <FormItem>
                           <FormLabel>Postal Code</FormLabel>
                           <FormControl>
-                            <Input placeholder="00100" {...field} className="border-2 border-pink-200 rounded-lg focus:border-purple-500" style={{ fontFamily: "'Fredoka One', cursive" }} />
+                            <Input placeholder="00100" {...field} className="border-2 border-pink-200 rounded-lg focus:border-purple-500" style={{ fontFamily: "'Fredoka One'" }} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -314,7 +314,7 @@ const Checkout = () => {
                         <FormItem>
                           <FormLabel>Country</FormLabel>
                           <FormControl>
-                            <Input placeholder="Kenya" {...field} className="border-2 border-pink-200 rounded-lg focus:border-purple-500" style={{ fontFamily: "'Fredoka One', cursive" }} />
+                            <Input placeholder="Kenya" {...field} className="border-2 border-pink-200 rounded-lg focus:border-purple-500" style={{ fontFamily: "'Fredoka One'" }} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -345,7 +345,7 @@ const Checkout = () => {
 
               <Card className="rounded-2xl shadow-lg border-2 border-yellow-100 bg-white">
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-2 text-2xl font-bold text-gray-900" style={{ fontFamily: "'Fredoka One', cursive" }}>
+                  <CardTitle className="flex items-center gap-2 text-2xl font-bold text-gray-900" style={{ fontFamily: "'Fredoka One'" }}>
                     <span className="bg-purple-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold">3</span>
                      Payment Method
                   </CardTitle>
@@ -399,7 +399,7 @@ const Checkout = () => {
                           <FormItem>
                             <FormLabel>Card Number</FormLabel>
                             <FormControl>
-                              <Input placeholder="1234 5678 9012 3456" {...field} className="border-2 border-pink-200 rounded-lg focus:border-purple-500" style={{ fontFamily: "'Fredoka One', cursive" }} />
+                              <Input placeholder="1234 5678 9012 3456" {...field} className="border-2 border-pink-200 rounded-lg focus:border-purple-500" style={{ fontFamily: "'Fredoka One'" }} />
                             </FormControl>
                             <FormMessage />
                           </FormItem>
@@ -413,7 +413,7 @@ const Checkout = () => {
                             <FormItem>
                               <FormLabel>Expiry Date</FormLabel>
                               <FormControl>
-                                <Input placeholder="MM/YY" {...field} className="border-2 border-pink-200 rounded-lg focus:border-purple-500" style={{ fontFamily: "'Fredoka One', cursive" }} />
+                                <Input placeholder="MM/YY" {...field} className="border-2 border-pink-200 rounded-lg focus:border-purple-500" style={{ fontFamily: "'Fredoka One'" }} />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -426,7 +426,7 @@ const Checkout = () => {
                             <FormItem>
                               <FormLabel>CVV</FormLabel>
                               <FormControl>
-                                <Input placeholder="123" {...field} className="border-2 border-pink-200 rounded-lg focus:border-purple-500" style={{ fontFamily: "'Fredoka One', cursive" }} />
+                                <Input placeholder="123" {...field} className="border-2 border-pink-200 rounded-lg focus:border-purple-500" style={{ fontFamily: "'Fredoka One'" }} />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -440,7 +440,7 @@ const Checkout = () => {
                           <FormItem>
                             <FormLabel>Name on Card</FormLabel>
                             <FormControl>
-                              <Input placeholder="John Doe" {...field} className="border-2 border-pink-200 rounded-lg focus:border-purple-500" style={{ fontFamily: "'Fredoka One', cursive" }} />
+                              <Input placeholder="John Doe" {...field} className="border-2 border-pink-200 rounded-lg focus:border-purple-500" style={{ fontFamily: "'Fredoka One'" }} />
                             </FormControl>
                             <FormMessage />
                           </FormItem>
@@ -459,7 +459,7 @@ const Checkout = () => {
                         id="mpesaNumber"
                         placeholder="e.g., 0712345678"
                         className="border-2 border-green-200 rounded-lg focus:border-green-500"
-                        style={{ fontFamily: "'Fredoka One', cursive" }}
+                        style={{ fontFamily: "'Fredoka One'" }}
                       />
                       <p className="text-xs text-gray-500">Ensure this is the number registered with your M-PESA account.</p>
                     </div>
@@ -476,7 +476,7 @@ const Checkout = () => {
             <div>
               <Card className="sticky top-24 rounded-2xl shadow-xl border-2 border-pink-100 bg-white">
                 <CardHeader>
-                  <CardTitle className="text-3xl font-bold text-gray-900" style={{ fontFamily: "'Fredoka One', cursive" }}>
+                  <CardTitle className="text-3xl font-bold text-gray-900" style={{ fontFamily: "'Fredoka One'" }}>
                     Your Playtime Summary
                   </CardTitle>
                 </CardHeader>
@@ -488,7 +488,7 @@ const Checkout = () => {
                           <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
                         </div>
                         <div className="flex-1 min-w-0">
-                          <h4 className="font-bold text-base text-gray-900 truncate" style={{ fontFamily: "'Fredoka One', cursive" }}>{item.name}</h4>
+                          <h4 className="font-bold text-base text-gray-900 truncate" style={{ fontFamily: "'Fredoka One'" }}>{item.name}</h4>
                           <div className="flex items-center justify-between text-sm">
                             <span className="text-gray-600">Qty: {item.quantity}</span>
                             <span className="font-semibold text-purple-600">KSh {(item.price * item.quantity).toLocaleString()}</span>
@@ -517,7 +517,7 @@ const Checkout = () => {
                       <span>KSh {tax.toLocaleString()}</span>
                     </div>
                     <Separator className="bg-purple-200" />
-                    <div className="flex justify-between font-black text-2xl " style={{ fontFamily: "'Fredoka One', cursive" }}>
+                    <div className="flex justify-between font-black text-2xl " style={{ fontFamily: "'Fredoka One'" }}>
                       <span>Grand Total</span>
                       <span>KSh {total.toLocaleString()}</span>
                     </div>
@@ -528,7 +528,7 @@ const Checkout = () => {
                     className="w-full bg-gradient-to-r from-green-500 to-green-500 hover:from-green-600 hover:to-blue-600 text-white font-bold rounded-full px-8 py-3 shadow-lg transition-all duration-300 hover:scale-105"
                     size="lg"
                     disabled={isProcessingOrder}
-                    style={{ fontFamily: "'Fredoka One', cursive" }}
+                    style={{ fontFamily: "'Fredoka One'" }}
                   >
                     {isProcessingOrder ? (
                       <span className="flex items-center">

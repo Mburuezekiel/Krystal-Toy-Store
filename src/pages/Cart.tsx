@@ -84,13 +84,13 @@ const Cart = () => {
      
 
         <div className="mb-8">
-          <Link to="/products" className="inline-flex items-center text-gray-700 hover:text-purple-600 transition-colors mb-4 font-medium" style={{ fontFamily: "'Fredoka One', cursive" }}>
+          <Link to="/products" className="inline-flex items-center text-gray-700 hover:text-purple-600 transition-colors mb-4 font-medium" style={{ fontFamily: "'Fredoka One'" }}>
             <ArrowLeft className="h-4 w-4 mr-2" />
             Continue  Shopping
           </Link>
           <h1
             className="text-4xl font-black text-transparent bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text mb-2 drop-shadow-lg"
-            style={{ fontFamily: "'Fredoka One', cursive" }}
+            style={{ fontFamily: "'Fredoka One'" }}
           >
             Your  Cart
           </h1>
@@ -105,7 +105,7 @@ const Cart = () => {
               <ShoppingBag className="h-16 w-16 mx-auto text-purple-500 mb-4 animate-bounce-slow" />
               <h2
                 className="text-3xl font-bold text-gray-900 mb-2"
-                style={{ fontFamily: "'Fredoka One', cursive" }}
+                style={{ fontFamily: "'Fredoka One'" }}
               >
                 Your  Cart is Empty
               </h2>
@@ -113,7 +113,7 @@ const Cart = () => {
               <Button
                 asChild
                 className="bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white font-bold rounded-full px-8 py-3 shadow-lg transition-all duration-300 hover:scale-105"
-                style={{ fontFamily: "'Fredoka One', cursive" }}
+                style={{ fontFamily: "'Fredoka One'" }}
               ><Link to="/toys">Explore</Link></Button>
             </CardContent>
           </Card>
@@ -137,7 +137,7 @@ const Cart = () => {
                           <div>
                             <h3
                               className="font-bold text-xl text-gray-900"
-                              style={{ fontFamily: "'Fredoka One', cursive" }}
+                              style={{ fontFamily: "'Fredoka One'" }}
                             >
                               {item.name}
                             </h3>
@@ -168,7 +168,7 @@ const Cart = () => {
                             >
                               <Minus className="h-4 w-4" />
                             </Button>
-                            <span className="px-4 py-1 font-bold text-lg text-gray-800 min-w-[3rem] text-center" style={{ fontFamily: "'Fredoka One', cursive" }}>{item.quantity}</span>
+                            <span className="px-4 py-1 font-bold text-lg text-gray-800 min-w-[3rem] text-center" style={{ fontFamily: "'Fredoka One'" }}>{item.quantity}</span>
                             <Button
                               variant="ghost"
                               size="icon"
@@ -182,7 +182,7 @@ const Cart = () => {
                           <div className="text-right">
                             <p
                               className="font-black text-2xl text-black"
-                              style={{ fontFamily: "'Fredoka One', cursive" }}
+                              style={{ fontFamily: "'Fredoka One'" }}
                             >
                               KSh {(item.price * item.quantity).toLocaleString()}
                             </p>
@@ -203,7 +203,7 @@ const Cart = () => {
                 <CardHeader>
                   <CardTitle
                     className="text-3xl font-bold text-gray-900"
-                    style={{ fontFamily: "'Fredoka One', cursive" }}
+                    style={{ fontFamily: "'Fredoka One'" }}
                   >
                     Cart Summary
                   </CardTitle>
@@ -222,7 +222,7 @@ const Cart = () => {
                     <span>KSh {tax.toLocaleString()}</span>
                   </div>
                   <Separator className="bg-pink-200" />
-                  <div className="flex justify-between font-black text-2xl text-purple-700" style={{ fontFamily: "'Fredoka One', cursive" }}>
+                  <div className="flex justify-between font-black text-2xl text-purple-700" style={{ fontFamily: "'Fredoka One'" }}>
                     <span>Grand Total</span>
                     <span>KSh {total.toLocaleString()}</span>
                   </div>
@@ -230,7 +230,7 @@ const Cart = () => {
                     asChild
                     className="w-full bg-green-500 hover:bg-green-600 text-white font-bold rounded-full px-8 py-3 shadow-lg transition-all duration-300 hover:scale-105"
                     size="lg"
-                    style={{ fontFamily: "'Fredoka One', cursive" }}
+                    style={{ fontFamily: "'Fredoka One'" }}
                   ><Link to="/checkout">Proceed to Checkout!</Link></Button>
                   <p className="text-xs text-center text-gray-500">
                     Final charges calculated at the magic checkout counter.

@@ -73,11 +73,6 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onSubmit, loading = false, 
     return Object.keys(newErrors).length === 0;
   };
 
-  /**
-   * Handles the form submission.
-   * Prevents default form submission and calls the onSubmit prop if the form is valid.
-   * @param {React.FormEvent} e - The form event.
-   */
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (validateForm()) {
@@ -105,7 +100,7 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onSubmit, loading = false, 
         <div className="text-center">
           <h2
             className="text-3xl font-bold text-gray-900 mb-2"
-            style={{ fontFamily: "'Fredoka One', cursive" }}
+            style={{ fontFamily: "'Fredoka One'" }}
           >
             Create Your Account
           </h2>
@@ -136,7 +131,7 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onSubmit, loading = false, 
                   placeholder="Enter your first name"
                   aria-invalid={errors.firstName ? "true" : "false"}
                   aria-describedby={errors.firstName ? "firstName-error" : undefined}
-                  style={{ fontFamily: "'Fredoka One', cursive" }}
+                  style={{ fontFamily: "'Fredoka One'" }}
                 />
                 <User size={20} className="absolute left-3 top-2.5 text-pink-400" />
               </div>
@@ -159,7 +154,7 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onSubmit, loading = false, 
                   placeholder="Enter your last name"
                   aria-invalid={errors.lastName ? "true" : "false"}
                   aria-describedby={errors.lastName ? "lastName-error" : undefined}
-                  style={{ fontFamily: "'Fredoka One', cursive" }}
+                  style={{ fontFamily: "'Fredoka One'" }}
                 />
                 <User size={20} className="absolute left-3 top-2.5 text-pink-400" />
               </div>
@@ -183,7 +178,7 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onSubmit, loading = false, 
                 placeholder="Enter your email address"
                 aria-invalid={errors.email ? "true" : "false"}
                 aria-describedby={errors.email ? "email-error" : undefined}
-                style={{ fontFamily: "'Fredoka One', cursive" }}
+                style={{ fontFamily: "'Fredoka One'" }}
               />
               <Mail size={20} className="absolute left-3 top-2.5 text-pink-400" />
             </div>
@@ -206,7 +201,7 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onSubmit, loading = false, 
                 placeholder="+254 7XX XXX XXX"
                 aria-invalid={errors.phone ? "true" : "false"}
                 aria-describedby={errors.phone ? "phone-error" : undefined}
-                style={{ fontFamily: "'Fredoka One', cursive" }}
+                style={{ fontFamily: "'Fredoka One'" }}
               />
               <Phone size={20} className="absolute left-3 top-2.5 text-pink-400" />
             </div>
@@ -229,7 +224,7 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onSubmit, loading = false, 
                 placeholder="Choose a strong password"
                 aria-invalid={errors.password ? "true" : "false"}
                 aria-describedby={errors.password ? "password-error" : undefined}
-                style={{ fontFamily: "'Fredoka One', cursive" }}
+                style={{ fontFamily: "'Fredoka One'" }}
               />
               <Lock size={20} className="absolute left-3 top-2.5 text-pink-400" />
               <button
@@ -260,7 +255,7 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onSubmit, loading = false, 
                 placeholder="Re-enter your password"
                 aria-invalid={errors.confirmPassword ? "true" : "false"}
                 aria-describedby={errors.confirmPassword ? "confirmPassword-error" : undefined}
-                style={{ fontFamily: "'Fredoka One', cursive" }}
+                style={{ fontFamily: "'Fredoka One'" }}
               />
               <Lock size={20} className="absolute left-3 top-2.5 text-pink-400" />
               <button
@@ -283,7 +278,7 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onSubmit, loading = false, 
                 ? 'bg-gray-400 cursor-not-allowed'
                 : 'bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600'
               }`}
-            style={{ fontFamily: "'Fredoka One', cursive" }}
+            style={{ fontFamily: "'Fredoka One'" }}
           >
             {loading ? 'Signing Up...' : 'Sign Up'}
           </Button>

@@ -71,7 +71,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ onSubmit, onGoogleLogin, loading 
         <div className="text-center">
           <h2
             className="text-3xl font-bold text-gray-900 mb-2"
-            style={{ fontFamily: "'Fredoka One', cursive" }}
+            style={{ fontFamily: "'Fredoka One'" }}
           >
             Welcome Back
           </h2>
@@ -102,7 +102,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ onSubmit, onGoogleLogin, loading 
                 placeholder="Enter your email"
                 aria-invalid={errors.email ? "true" : "false"}
                 aria-describedby={errors.email ? "email-error" : undefined}
-                style={{ fontFamily: "'Fredoka One', cursive" }}
+                style={{ fontFamily: "'Fredoka One'" }}
               />
               <Mail size={20} className="absolute left-3 top-2.5 text-pink-400" />
             </div>
@@ -125,7 +125,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ onSubmit, onGoogleLogin, loading 
                 placeholder="Enter your password"
                 aria-invalid={errors.password ? "true" : "false"}
                 aria-describedby={errors.password ? "password-error" : undefined}
-                style={{ fontFamily: "'Fredoka One', cursive" }}
+                style={{ fontFamily: "'Fredoka One'" }}
               />
               <Lock size={20} className="absolute left-3 top-2.5 text-pink-400" />
               <button
@@ -161,7 +161,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ onSubmit, onGoogleLogin, loading 
                 ? 'bg-gray-400 cursor-not-allowed'
                 : 'bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600'
               }`}
-            style={{ fontFamily: "'Fredoka One', cursive" }}
+            style={{ fontFamily: "'Fredoka One'" }}
           >
             {loading ? 'Signing In...' : 'Sign In'}
           </Button>

@@ -87,7 +87,7 @@ const Categories = () => {
         <div className="mb-10 text-center">
           <h1
             className="text-5xl font-black text-transparent bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text mb-4 drop-shadow-lg"
-            style={{ fontFamily: "'Fredoka One', cursive" }}
+            style={{ fontFamily: "'Fredoka One'" }}
           >
             Explore Our Toy Worlds!
           </h1>
@@ -122,7 +122,7 @@ const Categories = () => {
                       <div className="flex items-center justify-between">
                         <h3
                           className="font-bold text-2xl text-gray-900 group-hover:text-purple-700 transition-colors"
-                          style={{ fontFamily: "'Fredoka One', cursive" }}
+                          style={{ fontFamily: "'Fredoka One'" }}
                         >
                           {category.name}
                         </h3>
@@ -142,7 +142,7 @@ const Categories = () => {
         <div className="mt-20">
           <h2
             className="text-4xl font-bold text-gray-900 mb-10 text-center drop-shadow-md"
-            style={{ fontFamily: "'Fredoka One', cursive" }}
+            style={{ fontFamily: "'Fredoka One'" }}
           >
             Our Special Toy Collections!
           </h2>
@@ -159,7 +159,7 @@ const Categories = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-purple-800/80 to-transparent flex flex-col justify-end p-8 text-white transition-opacity duration-300 group-hover:bg-purple-800/60">
                     <h3
                       className="text-3xl font-black mb-2 drop-shadow-lg"
-                      style={{ fontFamily: "'Fredoka One', cursive" }}
+                      style={{ fontFamily: "'Fredoka One'" }}
                     >
                       Outdoor Play!
                     </h3>
@@ -183,7 +183,7 @@ const Categories = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-green-800/80 to-transparent flex flex-col justify-end p-8 text-white transition-opacity duration-300 group-hover:bg-green-800/60">
                     <h3
                       className="text-3xl font-black mb-2 drop-shadow-lg"
-                      style={{ fontFamily: "'Fredoka One', cursive" }}
+                      style={{ fontFamily: "'Fredoka One'" }}
                     >
                       Eco-Friendly Fun!
                     </h3>

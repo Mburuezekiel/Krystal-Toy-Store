@@ -54,7 +54,7 @@ const Contact = () => {
             <div className="max-w-4xl mx-auto text-center">
               <h1
                 className="text-5xl md:text-6xl font-black text-transparent bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text mb-6 drop-shadow-lg"
-                style={{ fontFamily: "'Fredoka One', cursive" }}
+                style={{ fontFamily: "'Fredoka One'" }}
               >
                 Connect with Krystal Toy Store
               </h1>
@@ -78,7 +78,7 @@ const Contact = () => {
                       </div>
                       <h3
                         className="font-bold text-xl text-gray-900 mb-3"
-                        style={{ fontFamily: "'Fredoka One', cursive" }}
+                        style={{ fontFamily: "'Fredoka One'" }}
                       >
                         {info.title}
                       </h3>
@@ -91,7 +91,7 @@ const Contact = () => {
                         variant="default"
                         size="lg"
                         className="bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white font-bold rounded-full px-8 py-3 shadow-md transition-all duration-300 hover:scale-105"
-                        style={{ fontFamily: "'Fredoka One', cursive" }}
+                        style={{ fontFamily: "'Fredoka One'" }}
                         asChild
                       >
                         {info.link ? (
@@ -113,7 +113,7 @@ const Contact = () => {
                 <CardHeader>
                   <CardTitle
                     className="text-3xl font-bold text-gray-900"
-                    style={{ fontFamily: "'Fredoka One', cursive" }}
+                    style={{ fontFamily: "'Fredoka One'" }}
                   >
                     Send Us a Message
                   </CardTitle>
@@ -159,7 +159,7 @@ const Contact = () => {
                     <Button
                       type="submit"
                       className="w-full bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600 text-white font-bold rounded-full px-8 py-3 shadow-lg transition-all duration-300 hover:scale-105"
-                      style={{ fontFamily: "'Fredoka One', cursive" }}
+                      style={{ fontFamily: "'Fredoka One'" }}
                     >
                       <Send className="h-5 w-5 mr-2" />
                       Send Message
@@ -174,7 +174,7 @@ const Contact = () => {
                     <div className="aspect-video bg-gradient-to-br from-blue-100 to-green-100 rounded-t-2xl flex items-center justify-center">
                       <div className="text-center text-gray-700 p-4">
                         <MapPin className="h-16 w-16 mx-auto mb-3 text-blue-600 animate-pulse-slow" />
-                        <p className="font-bold text-xl mb-1" style={{ fontFamily: "'Fredoka One', cursive" }}>Our Store Location</p>
+                        <p className="font-bold text-xl mb-1" style={{ fontFamily: "'Fredoka One'" }}>Our Store Location</p>
                         <p className="text-md leading-snug">
                           Find us on Kimathi Street, Nairobi CBD, on the 2nd Floor.<br/>
                           Visit us during business hours!
@@ -195,7 +195,7 @@ const Contact = () => {
                   <CardHeader>
                     <CardTitle
                       className="text-3xl font-bold text-gray-900"
-                      style={{ fontFamily: "'Fredoka One', cursive" }}
+                      style={{ fontFamily: "'Fredoka One'" }}
                     >
                       Frequently Asked Questions
                     </CardTitle>
@@ -237,7 +237,7 @@ const Contact = () => {
             <div className="text-center">
               <h2
                 className="text-4xl font-bold text-gray-900 mb-4 drop-shadow-md"
-                style={{ fontFamily: "'Fredoka One', cursive" }}
+                style={{ fontFamily: "'Fredoka One'" }}
               >
                 Need Immediate Assistance?
               </h2>
@@ -248,7 +248,7 @@ const Contact = () => {
                 <Button
                   size="lg"
                   className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold rounded-full px-8 py-4 shadow-lg transition-all duration-300 hover:scale-105"
-                  style={{ fontFamily: "'Fredoka One', cursive" }}
+                  style={{ fontFamily: "'Fredoka One'" }}
                   asChild
                 >
                   <a href="tel:+254700123456">
@@ -260,7 +260,7 @@ const Contact = () => {
                   variant="outline"
                   size="lg"
                   className="border-2 border-pink-400 text-purple-600 hover:bg-pink-100 hover:text-purple-800 font-bold rounded-full px-8 py-4 shadow-lg transition-all duration-300 hover:scale-105"
-                  style={{ fontFamily: "'Fredoka One', cursive" }}
+                  style={{ fontFamily: "'Fredoka One'" }}
                   asChild
                 >
                   <a href="mailto:support@krystaltoystore.co.ke">
