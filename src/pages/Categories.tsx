@@ -1,107 +1,136 @@
-
-import { Smartphone, Laptop, Tablet, Headphones, Camera, Watch, Gamepad2, Tv } from "lucide-react";
+import {
+  Sparkles,
+  ToyBrick,
+  Car,
+  Heart,
+  Puzzle,
+  Drumstick,
+  Crown,
+  Palette,
+  Blocks,
+  Feather,
+  Gem
+} from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
+
 import { Link } from "react-router-dom";
+import { Breadcrumbs } from "../components/ui/breadcrumb";
+
 
 const Categories = () => {
   const categories = [
     {
-      name: "Smartphones",
-      icon: Smartphone,
-      count: 45,
-      image: "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=400&q=80",
-      description: "Latest smartphones from top brands"
+      name: "Plush Pals",
+      icon: Heart,
+      count: 75,
+      image: "https://images.unsplash.com/photo-1599525206254-47ed23b9d885?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      description: "Cuddly companions for endless hugs and adventures"
     },
     {
-      name: "Laptops",
-      icon: Laptop,
-      count: 32,
-      image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=400&q=80",
-      description: "High-performance laptops for work and gaming"
+      name: "Building Worlds",
+      icon: ToyBrick,
+      count: 62,
+      image: "https://images.unsplash.com/photo-1550684376-effd6e3d0d82?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      description: "Construct amazing creations, brick by brick!"
     },
     {
-      name: "Tablets",
-      icon: Tablet,
-      count: 28,
-      image: "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=400&q=80",
-      description: "Portable tablets for entertainment and productivity"
+      name: "Wheels & Wings",
+      icon: Car,
+      count: 48,
+      image: "https://images.unsplash.com/photo-1549234800-410a56e7102e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      description: "Zoom into action with cool cars, planes, and more"
     },
     {
-      name: "Audio",
-      icon: Headphones,
+      name: "Magical Dolls & Playsets",
+      icon: Crown,
       count: 56,
-      image: "https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&w=400&q=80",
-      description: "Premium headphones and speakers"
+      image: "https://images.unsplash.com/photo-1621644047809-5a109861611e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      description: "Enchanting dolls and imaginative worlds to explore"
     },
     {
-      name: "Cameras",
-      icon: Camera,
-      count: 24,
-      image: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=400&q=80",
-      description: "Professional and consumer cameras"
+      name: "Brainy Adventures",
+      icon: Puzzle,
+      count: 34,
+      image: "https://images.unsplash.com/photo-1626270419080-1a7f05244b7f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      description: "Puzzles, science kits, and learning fun for curious minds"
     },
     {
-      name: "Wearables",
-      icon: Watch,
-      count: 38,
-      image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=400&q=80",
-      description: "Smart watches and fitness trackers"
+      name: "Tune Town",
+      icon: Drumstick,
+      count: 28,
+      image: "https://images.unsplash.com/photo-1579787137330-d309c5b1b46a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      description: "Create joyful melodies with our musical instruments"
     },
     {
-      name: "Gaming",
-      icon: Gamepad2,
+      name: "Super Heroes",
+      icon: Sparkles,
       count: 42,
-      image: "https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?auto=format&fit=crop&w=400&q=80",
-      description: "Gaming consoles and accessories"
+      image: "https://images.unsplash.com/photo-1534005839932-a5e186e9e30a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      description: "Unleash your inner hero with epic action figures"
     },
     {
-      name: "TVs & Displays",
-      icon: Tv,
-      count: 19,
-      image: "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=400&q=80",
-      description: "Smart TVs and computer monitors"
+      name: "Art & Creativity",
+      icon: Palette,
+      count: 39,
+      image: "https://images.unsplash.com/photo-1596464871922-b5e58e3f9a7d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      description: "Unleash imagination with painting, drawing, and crafting kits"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-background">
-      <Navbar />
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-50">
+     
       <main className="container mx-auto px-4 py-8">
-        {/* Header */}
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold mb-4">Product Categories</h1>
-          <p className="text-muted-foreground">Browse our electronics by category</p>
+        <Breadcrumbs />
+
+        <div className="mb-10 text-center">
+          <h1
+            className="text-5xl font-black text-transparent bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text mb-4 drop-shadow-lg"
+            style={{ fontFamily: "'Fredoka One', cursive" }}
+          >
+            Explore Our Toy Worlds!
+          </h1>
+          <p className="text-gray-700 text-xl max-w-2xl mx-auto">
+            Find the perfect playtime adventure by Browse our magical toy categories.
+          </p>
         </div>
 
-        {/* Categories Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {categories.map((category) => {
             const IconComponent = category.icon;
+            const categorySlug = category.name.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-').replace(/[^\w-]/g, '');
+
             return (
-              <Link key={category.name} to={`/products?category=${category.name.toLowerCase()}`}>
-                <Card className="group hover:shadow-lg transition-all duration-300 cursor-pointer">
-                  <CardContent className="p-6">
-                    <div className="aspect-square mb-4 overflow-hidden rounded-lg bg-muted relative">
+              <Link key={category.name} to={`/toys?category=${categorySlug}`}>
+                <Card className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 rounded-2xl overflow-hidden border-2 border-transparent hover:border-pink-300 bg-white">
+                  <CardContent className="p-0">
+                    <div className="aspect-square relative overflow-hidden rounded-t-2xl bg-gradient-to-br from-yellow-100 to-orange-100">
                       <img
                         src={category.image}
                         alt={category.name}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        onError={(e) => {
+                          e.currentTarget.src = 'https://via.placeholder.com/400x400?text=Toy+Category';
+                        }}
                       />
-                      <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                        <IconComponent className="h-12 w-12 text-white" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-center justify-center transition-opacity duration-300 group-hover:bg-black/20">
+                        <IconComponent className="h-16 w-16 text-white opacity-90 transition-transform duration-300 group-hover:scale-125 group-hover:opacity-100" />
                       </div>
                     </div>
-                    <div className="space-y-2">
+                    <div className="p-6 space-y-3">
                       <div className="flex items-center justify-between">
-                        <h3 className="font-semibold text-lg">{category.name}</h3>
-                        <Badge variant="secondary">
+                        <h3
+                          className="font-bold text-2xl text-gray-900 group-hover:text-purple-700 transition-colors"
+                          style={{ fontFamily: "'Fredoka One', cursive" }}
+                        >
+                          {category.name}
+                        </h3>
+                        <Badge className="bg-gradient-to-r from-pink-500 to-purple-500 text-white font-bold px-4 py-2 rounded-full text-md shadow-md">
                           {category.count} items
                         </Badge>
                       </div>
-                      <p className="text-sm text-muted-foreground">{category.description}</p>
+                      <p className="text-md text-gray-700 leading-relaxed">{category.description}</p>
                     </div>
                   </CardContent>
                 </Card>
@@ -110,45 +139,64 @@ const Categories = () => {
           })}
         </div>
 
-        {/* Featured Categories Section */}
-        <div className="mt-16">
-          <h2 className="text-2xl font-bold mb-8">Featured Collections</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <Card className="overflow-hidden">
-              <div className="aspect-video relative">
-                <img
-                  src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&w=800&q=80"
-                  alt="Gaming Setup"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
-                  <div className="p-6 text-white">
-                    <h3 className="text-xl font-bold mb-2">Gaming Essentials</h3>
-                    <p className="text-sm opacity-90">Complete your gaming setup with our curated collection</p>
+        <div className="mt-20">
+          <h2
+            className="text-4xl font-bold text-gray-900 mb-10 text-center drop-shadow-md"
+            style={{ fontFamily: "'Fredoka One', cursive" }}
+          >
+            Our Special Toy Collections!
+          </h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            <Card className="overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300">
+              <Link to="/products?collection=outdoor-adventure">
+                <div className="aspect-video relative group">
+                  <img
+                    src="https://images.unsplash.com/photo-1526437145455-d6029881882d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Kids playing outdoors with toys"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    onError={(e) => { e.currentTarget.src = 'https://via.placeholder.com/800x450?text=Outdoor+Fun'; }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-purple-800/80 to-transparent flex flex-col justify-end p-8 text-white transition-opacity duration-300 group-hover:bg-purple-800/60">
+                    <h3
+                      className="text-3xl font-black mb-2 drop-shadow-lg"
+                      style={{ fontFamily: "'Fredoka One', cursive" }}
+                    >
+                      Outdoor Play!
+                    </h3>
+                    <p className="text-lg opacity-90 leading-snug">
+                      Adventure awaits with our durable outdoor toys for endless fun in the sun!
+                    </p>
                   </div>
                 </div>
-              </div>
+              </Link>
             </Card>
 
-            <Card className="overflow-hidden">
-              <div className="aspect-video relative">
-                <img
-                  src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80"
-                  alt="Work from Home"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
-                  <div className="p-6 text-white">
-                    <h3 className="text-xl font-bold mb-2">Work From Home</h3>
-                    <p className="text-sm opacity-90">Professional equipment for your home office</p>
+            <Card className="overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300">
+              <Link to="/products?collection=eco-friendly-toys">
+                <div className="aspect-video relative group">
+                  <img
+                    src="https://images.unsplash.com/photo-1601006122602-0c918c54c37f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Wooden eco-friendly toys"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    onError={(e) => { e.currentTarget.src = 'https://via.placeholder.com/800x450?text=Eco+Friendly'; }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-green-800/80 to-transparent flex flex-col justify-end p-8 text-white transition-opacity duration-300 group-hover:bg-green-800/60">
+                    <h3
+                      className="text-3xl font-black mb-2 drop-shadow-lg"
+                      style={{ fontFamily: "'Fredoka One', cursive" }}
+                    >
+                      Eco-Friendly Fun!
+                    </h3>
+                    <p className="text-lg opacity-90 leading-snug">
+                      Sustainable and safe toys for a brighter planet and happier playtimes.
+                    </p>
                   </div>
                 </div>
-              </div>
+              </Link>
             </Card>
           </div>
         </div>
       </main>
-      <Footer />
     </div>
   );
 };

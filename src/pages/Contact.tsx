@@ -1,84 +1,106 @@
-
-import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Send, Wand2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
+import { Breadcrumbs } from "../components/ui/breadcrumb";
+
 
 const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted");
+    console.log("Form submitted!");
+    alert("Your message has been sent successfully. We'll get back to you soon.");
   };
 
   const contactInfo = [
     {
       icon: MapPin,
-      title: "Visit Our Store",
-      details: ["Kimathi Street, Nairobi CBD", "Building 2nd Floor, Shop 201"],
-      action: "Get Directions"
+      title: "Our Location",
+      details: ["Krystal Toy Store, Kimathi Street", "Nairobi CBD, 2nd Floor, Shop 201"],
+      action: "Get Directions",
+      link: "https://maps.app.goo.gl/YourActualGoogleMapsLinkHere"
     },
     {
       icon: Phone,
       title: "Call Us",
-      details: ["+254 700 123 456", "+254 733 987 654"],
-      action: "Call Now"
+      details: ["+254 700 123 456 (General Enquiries)", "+254 733 987 654 (Order Support)"],
+      action: "Call Now",
+      link: "tel:+254700123456"
     },
     {
       icon: Mail,
       title: "Email Us",
-      details: ["support@pamoja.co.ke", "sales@pamoja.co.ke"],
-      action: "Send Email"
+      details: ["support@krystaltoystore.co.ke", "sales@krystaltoystore.co.ke"],
+      action: "Send Email",
+      link: "mailto:support@krystaltoystore.co.ke"
     },
     {
       icon: Clock,
       title: "Business Hours",
-      details: ["Mon - Sat: 8:00 AM - 8:00 PM", "Sunday: 10:00 AM - 6:00 PM"],
-      action: "View Calendar"
+      details: ["Monday - Saturday: 8:00 AM - 8:00 PM", "Sunday: 10:00 AM - 6:00 PM"],
+      action: "View Hours",
+      link: "#"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-background">
-      <Navbar />
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-50">
+     
       <main>
-        {/* Hero Section */}
-        <section className="py-16 bg-gradient-to-br from-primary/10 via-background to-accent/10">
+        <section className="py-16 bg-gradient-to-br from-yellow-50 via-blue-50 to-purple-50">
           <div className="container mx-auto px-4">
+            <Breadcrumbs />
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Get in Touch
+              <h1
+                className="text-5xl md:text-6xl font-black text-transparent bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text mb-6 drop-shadow-lg"
+                style={{ fontFamily: "'Fredoka One', cursive" }}
+              >
+                Connect with Krystal Toy Store
               </h1>
-              <p className="text-xl text-muted-foreground mb-8">
-                We're here to help! Reach out to us for any questions, support, or feedback.
+              <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed">
+                Have questions, need support, or want to provide feedback? Our dedicated team is here to assist you.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Contact Info Cards */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
               {contactInfo.map((info) => {
                 const IconComponent = info.icon;
                 return (
-                  <Card key={info.title} className="text-center">
+                  <Card key={info.title} className="text-center rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border-2 border-pink-100 bg-white">
                     <CardContent className="p-6">
-                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                        <IconComponent className="h-6 w-6 text-primary" />
+                      <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-5 shadow-inner">
+                        <IconComponent className="h-8 w-8 text-purple-600 animate-pulse" />
                       </div>
-                      <h3 className="font-semibold mb-3">{info.title}</h3>
-                      <div className="space-y-1 text-sm text-muted-foreground mb-4">
+                      <h3
+                        className="font-bold text-xl text-gray-900 mb-3"
+                        style={{ fontFamily: "'Fredoka One', cursive" }}
+                      >
+                        {info.title}
+                      </h3>
+                      <div className="space-y-2 text-md text-gray-700 mb-5 leading-snug">
                         {info.details.map((detail, index) => (
                           <p key={index}>{detail}</p>
                         ))}
                       </div>
-                      <Button variant="outline" size="sm">
-                        {info.action}
+                      <Button
+                        variant="default"
+                        size="lg"
+                        className="bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white font-bold rounded-full px-8 py-3 shadow-md transition-all duration-300 hover:scale-105"
+                        style={{ fontFamily: "'Fredoka One', cursive" }}
+                        asChild
+                      >
+                        {info.link ? (
+                          <a href={info.link} target={info.link.startsWith('http') || info.link.startsWith('mailto') || info.link.startsWith('tel') ? "_blank" : "_self"} rel="noopener noreferrer">
+                            {info.action}
+                          </a>
+                        ) : (
+                          <button>{info.action}</button>
+                        )}
                       </Button>
                     </CardContent>
                   </Card>
@@ -86,95 +108,121 @@ const Contact = () => {
               })}
             </div>
 
-            {/* Contact Form and Map */}
             <div className="grid lg:grid-cols-2 gap-12">
-              {/* Contact Form */}
-              <Card>
+              <Card className="rounded-2xl shadow-xl border-2 border-blue-100 bg-white">
                 <CardHeader>
-                  <CardTitle>Send us a Message</CardTitle>
+                  <CardTitle
+                    className="text-3xl font-bold text-gray-900"
+                    style={{ fontFamily: "'Fredoka One', cursive" }}
+                  >
+                    Send Us a Message
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-sm font-medium mb-2">First Name</label>
-                        <Input placeholder="Your first name" required />
+                        <label className="block text-sm font-medium mb-2 text-gray-700">First Name</label>
+                        <Input placeholder="First Name" required className="border-pink-200 focus:border-purple-400 focus:ring-purple-400 rounded-lg py-2" />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium mb-2">Last Name</label>
-                        <Input placeholder="Your last name" required />
+                        <label className="block text-sm font-medium mb-2 text-gray-700">Last Name</label>
+                        <Input placeholder="Last Name" required className="border-pink-200 focus:border-purple-400 focus:ring-purple-400 rounded-lg py-2" />
                       </div>
                     </div>
                     
                     <div>
-                      <label className="block text-sm font-medium mb-2">Email</label>
-                      <Input type="email" placeholder="your.email@example.com" required />
+                      <label className="block text-sm font-medium mb-2 text-gray-700">Email</label>
+                      <Input type="email" placeholder="you@example.com" required className="border-pink-200 focus:border-purple-400 focus:ring-purple-400 rounded-lg py-2" />
                     </div>
                     
                     <div>
-                      <label className="block text-sm font-medium mb-2">Phone Number</label>
-                      <Input type="tel" placeholder="+254 700 000 000" />
+                      <label className="block text-sm font-medium mb-2 text-gray-700">Phone Number (Optional)</label>
+                      <Input type="tel" placeholder="+254 7XX XXX XXX" className="border-pink-200 focus:border-purple-400 focus:ring-purple-400 rounded-lg py-2" />
                     </div>
                     
                     <div>
-                      <label className="block text-sm font-medium mb-2">Subject</label>
-                      <Input placeholder="What's this about?" required />
+                      <label className="block text-sm font-medium mb-2 text-gray-700">Subject</label>
+                      <Input placeholder="Enter subject here" required className="border-pink-200 focus:border-purple-400 focus:ring-purple-400 rounded-lg py-2" />
                     </div>
                     
                     <div>
-                      <label className="block text-sm font-medium mb-2">Message</label>
-                      <Textarea 
-                        placeholder="Tell us how we can help you..."
-                        rows={5}
+                      <label className="block text-sm font-medium mb-2 text-gray-700">Message</label>
+                      <Textarea
+                        placeholder="Type your message here..."
+                        rows={6}
                         required
+                        className="border-pink-200 focus:border-purple-400 focus:ring-purple-400 rounded-lg py-2"
                       />
                     </div>
                     
-                    <Button type="submit" className="w-full">
-                      <Send className="h-4 w-4 mr-2" />
+                    <Button
+                      type="submit"
+                      className="w-full bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600 text-white font-bold rounded-full px-8 py-3 shadow-lg transition-all duration-300 hover:scale-105"
+                      style={{ fontFamily: "'Fredoka One', cursive" }}
+                    >
+                      <Send className="h-5 w-5 mr-2" />
                       Send Message
                     </Button>
                   </form>
                 </CardContent>
               </Card>
 
-              {/* Map and Additional Info */}
               <div className="space-y-8">
-                {/* Map Placeholder */}
-                <Card>
+                <Card className="rounded-2xl shadow-xl border-2 border-yellow-100 bg-white">
                   <CardContent className="p-0">
-                    <div className="aspect-video bg-muted rounded-lg flex items-center justify-center">
-                      <div className="text-center text-muted-foreground">
-                        <MapPin className="h-12 w-12 mx-auto mb-2" />
-                        <p className="font-medium">Interactive Map</p>
-                        <p className="text-sm">Kimathi Street, Nairobi CBD</p>
+                    <div className="aspect-video bg-gradient-to-br from-blue-100 to-green-100 rounded-t-2xl flex items-center justify-center">
+                      <div className="text-center text-gray-700 p-4">
+                        <MapPin className="h-16 w-16 mx-auto mb-3 text-blue-600 animate-pulse-slow" />
+                        <p className="font-bold text-xl mb-1" style={{ fontFamily: "'Fredoka One', cursive" }}>Our Store Location</p>
+                        <p className="text-md leading-snug">
+                          Find us on Kimathi Street, Nairobi CBD, on the 2nd Floor.<br/>
+                          Visit us during business hours!
+                        </p>
+                        <Button
+                          variant="ghost"
+                          className="mt-4 text-blue-600 hover:text-blue-800 flex items-center"
+                          onClick={() => window.open("https://maps.app.goo.gl/YourActualGoogleMapsLinkHere", "_blank")}
+                        >
+                          <MapPin className="h-4 w-4 mr-2" /> View on Map
+                        </Button>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
 
-                {/* FAQ Section */}
-                <Card>
+                <Card className="rounded-2xl shadow-xl border-2 border-orange-100 bg-white">
                   <CardHeader>
-                    <CardTitle>Frequently Asked Questions</CardTitle>
+                    <CardTitle
+                      className="text-3xl font-bold text-gray-900"
+                      style={{ fontFamily: "'Fredoka One', cursive" }}
+                    >
+                      Frequently Asked Questions
+                    </CardTitle>
                   </CardHeader>
-                  <CardContent className="space-y-4">
+                  <CardContent className="space-y-6">
                     <div>
-                      <h4 className="font-medium mb-1">What are your return policies?</h4>
-                      <p className="text-sm text-muted-foreground">
-                        We offer 30-day returns on most items in original condition.
+                      <h4 className="font-bold text-lg text-purple-700 mb-1">What is your return policy?</h4>
+                      <p className="text-md text-gray-700 leading-snug">
+                        We offer **30-day returns** on most items in their original condition. Please refer to our full return policy for details.
                       </p>
                     </div>
                     <div>
-                      <h4 className="font-medium mb-1">Do you offer warranties?</h4>
-                      <p className="text-sm text-muted-foreground">
-                        All products come with manufacturer warranties, plus our own service guarantee.
+                      <h4 className="font-bold text-lg text-purple-700 mb-1">Do products come with a warranty?</h4>
+                      <p className="text-md text-gray-700 leading-snug">
+                        All products come with **manufacturer warranties**. Specific warranty details are available on each product page or by contacting support.
                       </p>
                     </div>
                     <div>
-                      <h4 className="font-medium mb-1">Can I track my order?</h4>
-                      <p className="text-sm text-muted-foreground">
-                        Yes! You'll receive tracking information once your order ships.
+                      <h4 className="font-bold text-lg text-purple-700 mb-1">How can I track my order?</h4>
+                      <p className="text-md text-gray-700 leading-snug">
+                        Once your order has shipped, you will receive **tracking information** via email. You can also track your order directly on our website.
+                      </p>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-lg text-purple-700 mb-1">Do you offer gift wrapping?</h4>
+                      <p className="text-md text-gray-700 leading-snug">
+                        Yes, we offer **gift wrapping services** for various occasions. You can select this option during the checkout process.
                       </p>
                     </div>
                   </CardContent>
@@ -184,30 +232,47 @@ const Contact = () => {
           </div>
         </section>
 
-        {/* Support Section */}
-        <section className="py-16 bg-muted/30">
+        <section className="py-16 bg-gradient-to-br from-blue-100 to-green-100">
           <div className="container mx-auto px-4">
             <div className="text-center">
-              <h2 className="text-3xl font-bold mb-4">Need Immediate Help?</h2>
-              <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-                For urgent support or technical issues, don't hesitate to call us directly.
-                Our support team is ready to assist you.
+              <h2
+                className="text-4xl font-bold text-gray-900 mb-4 drop-shadow-md"
+                style={{ fontFamily: "'Fredoka One', cursive" }}
+              >
+                Need Immediate Assistance?
+              </h2>
+              <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto leading-relaxed">
+                For urgent matters or direct support, please call us. Our support team is available to assist you promptly.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg">
-                  <Phone className="h-4 w-4 mr-2" />
-                  Call Support: +254 700 123 456
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold rounded-full px-8 py-4 shadow-lg transition-all duration-300 hover:scale-105"
+                  style={{ fontFamily: "'Fredoka One', cursive" }}
+                  asChild
+                >
+                  <a href="tel:+254700123456">
+                    <Phone className="h-5 w-5 mr-3" />
+                    Call Us Now
+                  </a>
                 </Button>
-                <Button variant="outline" size="lg">
-                  <Mail className="h-4 w-4 mr-2" />
-                  Email Support
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="border-2 border-pink-400 text-purple-600 hover:bg-pink-100 hover:text-purple-800 font-bold rounded-full px-8 py-4 shadow-lg transition-all duration-300 hover:scale-105"
+                  style={{ fontFamily: "'Fredoka One', cursive" }}
+                  asChild
+                >
+                  <a href="mailto:support@krystaltoystore.co.ke">
+                    <Mail className="h-5 w-5 mr-3" />
+                    Email Support
+                  </a>
                 </Button>
               </div>
             </div>
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   );
 };
