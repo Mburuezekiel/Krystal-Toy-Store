@@ -22,7 +22,7 @@ interface HeroSlide {
 
 export function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
+  const [isTransitioning, setIsTransitioning] = useState(false);
   const [displayedTitle, setDisplayedTitle] = useState('');
   const [displayedSubtitle, setDisplayedSubtitle] = useState('');
   const [titleComplete, setTitleComplete] = useState(false);
@@ -34,8 +34,8 @@ export function Hero() {
       title: "Unleash the Fun!",
       subtitle: "Discover a world of imagination and play",
       image: Doll,
-      cta: "Shop All Toys",
-      link: "/products",
+      cta: "Shop  Now",
+      link: "/toys",
       bgColor: "from-pink-400 via-purple-500 to-indigo-600",
       accentColor: "text-yellow-300"
     },
@@ -45,7 +45,7 @@ export function Hero() {
       subtitle: "Creating Happy Childhood Memories",
       image: car,
       cta: "Explore Collections",
-      link: "/products?category=action-figures",
+      link: "/products?categories",
       bgColor: "from-orange-400 via-red-500 to-pink-600",
       accentColor: "text-blue-200"
     },
@@ -55,7 +55,7 @@ export function Hero() {
       subtitle: "Softness, joy, and endless hugs for your little ones",
       image: toys,
       cta: "Snuggle Up",
-      link: "/products?category=stuffed-animals",
+      link: "/products?category=dolls",
       bgColor: "from-green-400 via-blue-500 to-purple-600",
       accentColor: "text-pink-200"
     },
@@ -108,39 +108,39 @@ export function Hero() {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setIsAnimating(true);
+      setIsTransitioning(true);
       setTimeout(() => {
         setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-        setIsAnimating(false);
-      }, 300);
+        setIsTransitioning(false);
+      }, 500);
     }, 8000);
 
     return () => clearInterval(timer);
   }, [heroSlides.length]);
 
   const nextSlide = () => {
-    setIsAnimating(true);
+    setIsTransitioning(true);
     setTimeout(() => {
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-      setIsAnimating(false);
-    }, 300);
+      setIsTransitioning(false);
+    }, 500);
   };
 
   const prevSlide = () => {
-    setIsAnimating(true);
+    setIsTransitioning(true);
     setTimeout(() => {
       setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
-      setIsAnimating(false);
-    }, 300);
+      setIsTransitioning(false);
+    }, 500);
   };
 
   const goToSlide = (index: number) => {
     if (index !== currentSlide) {
-      setIsAnimating(true);
+      setIsTransitioning(true);
       setTimeout(() => {
         setCurrentSlide(index);
-        setIsAnimating(false);
-      }, 300);
+        setIsTransitioning(false);
+      }, 500);
     }
   };
 
@@ -160,14 +160,12 @@ export function Hero() {
       </div>
 
       <div className="absolute inset-0 z-10">
-        <div 
-          className={`w-full h-full bg-cover bg-center transition-all duration-2000 ease-out ${
-            isAnimating ? 'scale-110' : 'scale-105'
-          } animate-zoom-in opacity-80`}
+        <div
+          className={`w-full h-full bg-cover bg-center transition-all duration-500 ease-in-out ${
+            isTransitioning ? 'opacity-0 scale-100' : 'opacity-80 animate-ease-scale' // Apply new animation here
+          }`}
           style={{
             backgroundImage: `url(${currentSlideData.image})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
@@ -179,7 +177,7 @@ export function Hero() {
           <div className="max-w-2xl mx-auto text-center lg:text-left lg:mx-0">
             <h1 
               className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-4 sm:mb-6 leading-tight transition-all duration-700 ${
-                isAnimating ? 'translate-y-4 opacity-0' : 'translate-y-0 opacity-100'
+                isTransitioning ? 'translate-y-4 opacity-0' : 'translate-y-0 opacity-100'
               }`}
               style={{ 
                 fontFamily: "'Fredoka One', 'Comic Sans MS', cursive",
@@ -193,7 +191,7 @@ export function Hero() {
             
             <p 
               className={`text-base sm:text-lg md:text-xl lg:text-2xl font-bold mb-6 sm:mb-8 lg:mb-10 transition-all duration-700 ${currentSlideData.accentColor} ${
-                isAnimating ? 'translate-y-4 opacity-0' : 'translate-y-0 opacity-100'
+                isTransitioning ? 'translate-y-4 opacity-0' : 'translate-y-0 opacity-100'
               } ${titleComplete ? 'opacity-100' : 'opacity-0'}`}
               style={{ 
                 fontFamily: "'Fredoka One', 'Comic Sans MS', cursive",
@@ -230,7 +228,6 @@ export function Hero() {
           </div>
         </div>
       </div>
-
 
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex space-x-3">
         {heroSlides.map((_, index) => (
@@ -273,10 +270,7 @@ export function Hero() {
           75% { transform: rotate(-3deg); }
         }
         
-        @keyframes zoom-in {
-          0% { transform: scale(1); }
-          100% { transform: scale(1.05); }
-        }
+        /* Removed original zoom-in as it's a single shot */
         
         @keyframes bounce-in {
           0% { 
@@ -292,6 +286,13 @@ export function Hero() {
             opacity: 1; 
           }
         }
+
+        /* NEW ANIMATION FOR CONTINUOUS IMAGE EASE */
+        @keyframes ease-scale {
+            0% { transform: scale(1.05); }
+            50% { transform: scale(1.03); } /* Slightly ease out/down */
+            100% { transform: scale(1.05); }
+        }
         
         .animate-float {
           animation: float 6s ease-in-out infinite;
@@ -301,12 +302,13 @@ export function Hero() {
           animation: wiggle 2s ease-in-out infinite;
         }
         
-        .animate-zoom-in {
-          animation: zoom-in 2s ease-out forwards;
-        }
-        
         .animate-bounce-in {
           animation: bounce-in 0.8s ease-out forwards;
+        }
+
+        /* Apply the new continuous animation */
+        .animate-ease-scale {
+            animation: ease-scale 10s ease-in-out infinite; /* Adjust duration and easing as needed */
         }
       `}</style>
     </section>
