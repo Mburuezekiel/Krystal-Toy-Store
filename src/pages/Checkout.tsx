@@ -55,7 +55,7 @@ const Checkout = () => {
       name: "Sparkle Star Unicorn Plush",
       price: 3200,
       quantity: 1,
-      image: "https://images.unsplash.com/photo-1618398327299-a417387e834b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image: "/favicon.ico",
       detail1: "Soft Fabric",
       detail2: "All Ages"
     },
@@ -64,7 +64,7 @@ const Checkout = () => {
       name: "Galactic Robot Builder Kit",
       price: 7500,
       quantity: 1,
-      image: "https://images.unsplash.com/photo-1627063065662-e60d13c7a99f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image: "/favicon.ico",
       detail1: "Plastic",
       detail2: "8+ Years"
     },
@@ -73,7 +73,7 @@ const Checkout = () => {
       name: "Miniature Tea Set & Dolls",
       price: 2500,
       quantity: 2,
-      image: "https://images.unsplash.com/photo-1577789725514-411475583b4b?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image: "/favicon.ico",
       detail1: "Ceramic",
       detail2: "4+ Years"
     }

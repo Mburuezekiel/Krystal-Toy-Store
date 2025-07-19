@@ -22,7 +22,7 @@ const Products = () => {
       name: "Sparkle Star Unicorn Plush",
       price: 3200,
       originalPrice: 3500,
-      image: "https://images.unsplash.com/photo-1618398327299-a417387e834b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image: "/favicon.ico",
       category: "plush-toys",
       rating: 4.9,
       inStock: true
@@ -32,7 +32,7 @@ const Products = () => {
       name: "Galactic Robot Builder Kit",
       price: 7500,
       originalPrice: 9000,
-      image: "https://images.unsplash.com/photo-1627063065662-e60d13c7a99f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image: "/favicon.ico",
       category: "building-sets",
       rating: 4.8,
       inStock: true
@@ -42,7 +42,7 @@ const Products = () => {
       name: "Rainbow Express Wooden Train",
       price: 4800,
       originalPrice: 6000,
-      image: "https://images.unsplash.com/photo-1517743046098-b7692288346e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image: "favicon.ico",
       category: "vehicles",
       rating: 4.7,
       inStock: false
@@ -52,7 +52,7 @@ const Products = () => {
       name: "Enchanted Dollhouse Castle",
       price: 9900,
       originalPrice: 11000,
-      image: "https://images.unsplash.com/photo-1582234033103-e38029d201a0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image: "/favicon.ico",
       category: "dolls-playsets",
       rating: 4.8,
       inStock: true
@@ -62,7 +62,7 @@ const Products = () => {
       name: "Dinosaur Digging Adventure Kit",
       price: 2500,
       originalPrice: null,
-      image: "https://images.unsplash.com/photo-1549488344-93c66a4f2249?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image: "/favicon.ico",
       category: "educational-toys",
       rating: 4.6,
       inStock: true
@@ -72,7 +72,7 @@ const Products = () => {
       name: "Magical Music Keyboard",
       price: 5500,
       originalPrice: 6200,
-      image: "https://images.unsplash.com/photo-1586546375086-4f4a3f7f0e33?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image: "/favicon.ico",
       category: "musical-toys",
       rating: 4.7,
       inStock: true
@@ -82,7 +82,7 @@ const Products = () => {
       name: "Cosmic Rocket Launch Pad",
       price: 6800,
       originalPrice: 7500,
-      image: "https://images.unsplash.com/photo-1563851502447-f274a2608d06?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image: "/favicon.ico",
       category: "building-sets",
       rating: 4.5,
       inStock: true
@@ -92,7 +92,7 @@ const Products = () => {
       name: "Wizard's Apprentice Wand",
       price: 1500,
       originalPrice: null,
-      image: "https://images.unsplash.com/photo-1543781700-1c002279b946?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image: "/favicon.ico",
       category: "role-play",
       rating: 4.9,
       inStock: true

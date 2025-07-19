@@ -24,56 +24,56 @@ const Categories = () => {
       name: "Plush Pals",
       icon: Heart,
       count: 75,
-      image: "https://images.unsplash.com/photo-1599525206254-47ed23b9d885?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image: "/favicon.ico",
       description: "Cuddly companions for endless hugs and adventures"
     },
     {
       name: "Building Worlds",
       icon: ToyBrick,
       count: 62,
-      image: "https://images.unsplash.com/photo-1550684376-effd6e3d0d82?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image: "/favicon.ico",
       description: "Construct amazing creations, brick by brick!"
     },
     {
       name: "Wheels & Wings",
       icon: Car,
       count: 48,
-      image: "https://images.unsplash.com/photo-1549234800-410a56e7102e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image: "/favicon.ico",
       description: "Zoom into action with cool cars, planes, and more"
     },
     {
       name: "Magical Dolls & Playsets",
       icon: Crown,
       count: 56,
-      image: "https://images.unsplash.com/photo-1621644047809-5a109861611e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image: "/favicon.ico",
       description: "Enchanting dolls and imaginative worlds to explore"
     },
     {
       name: "Brainy Adventures",
       icon: Puzzle,
       count: 34,
-      image: "https://images.unsplash.com/photo-1626270419080-1a7f05244b7f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image: "/favicon.ico",
       description: "Puzzles, science kits, and learning fun for curious minds"
     },
     {
       name: "Tune Town",
       icon: Drumstick,
       count: 28,
-      image: "https://images.unsplash.com/photo-1579787137330-d309c5b1b46a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image: "/favicon.ico",
       description: "Create joyful melodies with our musical instruments"
     },
     {
       name: "Super Heroes",
       icon: Sparkles,
       count: 42,
-      image: "https://images.unsplash.com/photo-1534005839932-a5e186e9e30a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image: "/favicon.ico",
       description: "Unleash your inner hero with epic action figures"
     },
     {
       name: "Art & Creativity",
       icon: Palette,
       count: 39,
-      image: "https://images.unsplash.com/photo-1596464871922-b5e58e3f9a7d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image: "/favicon.ico",
       description: "Unleash imagination with painting, drawing, and crafting kits"
     }
   ];
@@ -151,7 +151,7 @@ const Categories = () => {
               <Link to="/products?collection=outdoor-adventure">
                 <div className="aspect-video relative group">
                   <img
-                    src="https://images.unsplash.com/photo-1526437145455-d6029881882d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    src="/KrystalLogo.png"
                     alt="Kids playing outdoors with toys"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     onError={(e) => { e.currentTarget.src = 'https://via.placeholder.com/800x450?text=Outdoor+Fun'; }}
@@ -175,7 +175,7 @@ const Categories = () => {
               <Link to="/products?collection=eco-friendly-toys">
                 <div className="aspect-video relative group">
                   <img
-                    src="https://images.unsplash.com/photo-1601006122602-0c918c54c37f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    src="KrystalLogo.png"
                     alt="Wooden eco-friendly toys"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     onError={(e) => { e.currentTarget.src = 'https://via.placeholder.com/800x450?text=Eco+Friendly'; }}

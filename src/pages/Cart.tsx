@@ -27,7 +27,7 @@ const Cart = () => {
       name: "Rainbow Express Wooden Train",
       price: 4800,
       quantity: 1,
-      image: "https://images.unsplash.com/photo-1517743046098-b7692288346e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image: "/favicon.ico",
       detail1: "Wood",
       detail2: "Designed for Ages 3+ "
     },
@@ -36,7 +36,7 @@ const Cart = () => {
       name: "Galactic Robot Builder Kit",
       price: 7500,
       quantity: 1,
-      image: "https://images.unsplash.com/photo-1627063065662-e60d13c7a99f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image: "/favicon.ico",
       detail1: "Plastic",
       detail2: "8+ Years"
     },
@@ -45,7 +45,7 @@ const Cart = () => {
       name: "Sparkle Star Unicorn Plush",
       price: 3200,
       quantity: 2,
-      image: "https://images.unsplash.com/photo-1618398327299-a417387e834b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image: "/favicon.ico",
       detail1: "Soft Fabric",
       detail2: "All Ages"
     }

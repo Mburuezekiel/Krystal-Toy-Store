@@ -13,7 +13,7 @@ const featuredToys = [
     originalPrice: "KSh 3,500",
     rating: 4.9,
     reviews: 789,
-    image: "https://images.unsplash.com/photo-1618398327299-a417387e834b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "/favicon.ico",
     badge: "Fan Favorite",
     discount: "9% OFF"
   },
@@ -24,7 +24,7 @@ const featuredToys = [
     originalPrice: "KSh 9,000",
     rating: 4.9,
     reviews: 450,
-    image: "https://images.unsplash.com/photo-1627063065662-e60d13c7a99f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "/favicon.ico",
     badge: "Top Pick!",
     discount: "15% OFF"
   },
@@ -35,7 +35,7 @@ const featuredToys = [
     originalPrice: "KSh 6,000",
     rating: 4.7,
     reviews: 210,
-    image: "https://images.unsplash.com/photo-1517743046098-b7692288346e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "/favicon.ico",
     badge: "New Arrival",
     discount: "20% OFF"
   },
@@ -46,7 +46,7 @@ const featuredToys = [
     originalPrice: "KSh 11,000",
     rating: 4.8,
     reviews: 123,
-    image: "https://images.unsplash.com/photo-1582234033103-e38029d201a0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "/favicon.ico",
     badge: "Limited Edition",
     discount: "10% OFF"
   }
