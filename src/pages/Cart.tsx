@@ -236,7 +236,7 @@ const Cart = () => {
                     size="lg"
                     style={{ fontFamily: "'Fredoka One'" }}
                   >
-                    <Link to="/checkout">Proceed to Checkout!</Link>
+                    <Link to="/checkout">Proceed to Checkout</Link>
                   </Button>
                   <p className="text-xs text-center text-gray-500">
                     Final charges calculated at checkout.
