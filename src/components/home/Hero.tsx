@@ -180,7 +180,7 @@ export function Hero() {
                 isTransitioning ? 'translate-y-4 opacity-0' : 'translate-y-0 opacity-100'
               }`}
               style={{ 
-                fontFamily: "'Fredoka One', 'Comic Sans MS', cursive",
+                fontFamily: "'Fredoka One', 'Comic Sans MS'",
                 textShadow: '4px 4px 0px rgba(0,0,0,0.5), 8px 8px 0px rgba(0,0,0,0.3)',
                 WebkitTextStroke: '1px rgba(255,255,255,0.3)'
               }}
@@ -194,7 +194,7 @@ export function Hero() {
                 isTransitioning ? 'translate-y-4 opacity-0' : 'translate-y-0 opacity-100'
               } ${titleComplete ? 'opacity-100' : 'opacity-0'}`}
               style={{ 
-                fontFamily: "'Fredoka One', 'Comic Sans MS', cursive",
+                fontFamily: "'Fredoka One', 'Comic Sans MS'",
                 textShadow: '2px 2px 0px rgba(0,0,0,0.5)',
                 animationDelay: '0.2s'
               }}
@@ -210,7 +210,7 @@ export function Hero() {
               }`}
               onClick={() => window.location.href = currentSlideData.link}
               style={{ 
-                fontFamily: "'Fredoka One', 'Comic Sans MS', cursive",
+                fontFamily: "'Fredoka One', 'Comic Sans MS'",
                 boxShadow: '0 6px 0 #b45309, 0 10px 20px rgba(0,0,0,0.4)',
                 animationDelay: '0.4s'
               }}
@@ -251,7 +251,7 @@ export function Hero() {
       <div className="absolute top-40 left-8 z-30 hidden md:flex items-center space-x-4 animate-float">
         <div className="flex items-center space-x-2">
           <Star className="w-6 h-6 text-yellow-300 animate-spin" style={{animationDuration: '8s'}} />
-          <span className="text-white font-bold text-lg backdrop-blur-sm bg-black/20 px-3 py-1 rounded-full" style={{fontFamily: "'Fredoka One', cursive"}}>
+          <span className="text-white font-bold text-lg backdrop-blur-sm bg-black/20 px-3 py-1 rounded-full" style={{fontFamily: "'Fredoka One'"}}>
             Toys for Every Age!
           </span>
           <Star className="w-6 h-6 text-yellow-300 animate-spin" style={{animationDuration: '8s', animationDirection: 'reverse'}} />

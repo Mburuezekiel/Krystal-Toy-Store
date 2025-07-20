@@ -98,7 +98,7 @@ const ProductDetail = () => {
 
       <main className="container mx-auto px-4 py-8">
         <div className="flex items-center gap-2 mb-8">
-          <Link to="/toys" className="flex items-center gap-2 text-gray-700 hover:text-purple-600 font-medium transition-colors" style={{ fontFamily: "'Fredoka One', cursive" }}>
+          <Link to="/toys" className="flex items-center gap-2 text-gray-700 hover:text-purple-600 font-medium transition-colors" style={{ fontFamily: "'Fredoka One'" }}>
             <ArrowLeft className="h-4 w-4" />
             Back to Products
           </Link>
@@ -136,7 +136,7 @@ const ProductDetail = () => {
               <Badge variant="secondary" className="mb-2 bg-yellow-300 text-purple-800 text-sm px-3 py-1 rounded-full font-semibold">
                 {product.category}
               </Badge>
-              <h1 className="text-4xl font-black text-transparent bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text mb-2 drop-shadow-lg" style={{ fontFamily: "'Fredoka One', cursive" }}>
+              <h1 className="text-4xl font-black text-transparent bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text mb-2 drop-shadow-lg" style={{ fontFamily: "'Fredoka One'" }}>
                 {product.name}
               </h1>
               <p className="text-gray-600 text-lg font-medium">{product.brand}</p>
@@ -160,7 +160,7 @@ const ProductDetail = () => {
 
             <div className="space-y-2">
               <div className="flex items-center gap-4">
-                <span className="text-4xl font-bold " style={{ fontFamily: "'Fredoka One', cursive" }}>
+                <span className="text-4xl font-bold " style={{ fontFamily: "'Fredoka One'" }}>
                   KSh {product.price.toLocaleString()}
                 </span>
                 {product.originalPrice && (
@@ -203,7 +203,7 @@ const ProductDetail = () => {
                   >
                     <Minus className="h-5 w-5" />
                   </Button>
-                  <span className="px-6 py-2 text-xl font-bold text-gray-800" style={{ fontFamily: "'Fredoka One', cursive" }}>{quantity}</span>
+                  <span className="px-6 py-2 text-xl font-bold text-gray-800" style={{ fontFamily: "'Fredoka One'" }}>{quantity}</span>
                   <Button
                     variant="ghost"
                     size="icon"
@@ -221,7 +221,7 @@ const ProductDetail = () => {
                   className="flex-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold rounded-full px-8 py-3 shadow-lg transition-all duration-300 hover:scale-105 hover:from-purple-600 hover:to-pink-600"
                   size="lg"
                   disabled={!product.inStock}
-                  style={{ fontFamily: "'Fredoka One', cursive" }}
+                  style={{ fontFamily: "'Fredoka One'" }}
                 >
                   <ShoppingCart className="h-6 w-6 mr-3" />
                   Add to Cart
@@ -236,7 +236,7 @@ const ProductDetail = () => {
             </div>
 
             <div className="space-y-4 pt-6 border-t border-purple-200">
-              <h3 className="font-bold text-xl text-gray-800" style={{ fontFamily: "'Fredoka One', cursive" }}>Key Features:</h3>
+              <h3 className="font-bold text-xl text-gray-800" style={{ fontFamily: "'Fredoka One'" }}>Key Features:</h3>
               <div className="grid grid-cols-1 gap-2">
                 {product.features.map((feature, index) => (
                   <div key={index} className="flex items-center gap-3">
@@ -266,13 +266,13 @@ const ProductDetail = () => {
 
         <Tabs defaultValue="description" className="mb-16">
           <TabsList className="grid w-full grid-cols-3 bg-purple-100 rounded-xl shadow-inner p-1">
-            <TabsTrigger value="description" className="data-[state=active]:bg-purple-500 data-[state=active]:text-white data-[state=active]:shadow-md data-[state=active]:font-bold rounded-lg text-lg px-6 py-3 transition-colors duration-200" style={{ fontFamily: "'Fredoka One', cursive" }}>
+            <TabsTrigger value="description" className="data-[state=active]:bg-purple-500 data-[state=active]:text-white data-[state=active]:shadow-md data-[state=active]:font-bold rounded-lg text-lg px-6 py-3 transition-colors duration-200" style={{ fontFamily: "'Fredoka One'" }}>
               Description
             </TabsTrigger>
-            <TabsTrigger value="specifications" className="data-[state=active]:bg-purple-500 data-[state=active]:text-white data-[state=active]:shadow-md data-[state=active]:font-bold rounded-lg text-lg px-6 py-3 transition-colors duration-200" style={{ fontFamily: "'Fredoka One', cursive" }}>
+            <TabsTrigger value="specifications" className="data-[state=active]:bg-purple-500 data-[state=active]:text-white data-[state=active]:shadow-md data-[state=active]:font-bold rounded-lg text-lg px-6 py-3 transition-colors duration-200" style={{ fontFamily: "'Fredoka One'" }}>
               Specifications
             </TabsTrigger>
-            <TabsTrigger value="reviews" className="data-[state=active]:bg-purple-500 data-[state=active]:text-white data-[state=active]:shadow-md data-[state=active]:font-bold rounded-lg text-lg px-6 py-3 transition-colors duration-200" style={{ fontFamily: "'Fredoka One', cursive" }}>
+            <TabsTrigger value="reviews" className="data-[state=active]:bg-purple-500 data-[state=active]:text-white data-[state=active]:shadow-md data-[state=active]:font-bold rounded-lg text-lg px-6 py-3 transition-colors duration-200" style={{ fontFamily: "'Fredoka One'" }}>
               Reviews
             </TabsTrigger>
           </TabsList>
@@ -317,7 +317,7 @@ const ProductDetail = () => {
         </Tabs>
 
         <div>
-          <h2 className="text-3xl font-black text-transparent bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text mb-6 drop-shadow-lg" style={{ fontFamily: "'Fredoka One', cursive" }}>
+          <h2 className="text-3xl font-black text-transparent bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text mb-6 drop-shadow-lg" style={{ fontFamily: "'Fredoka One'" }}>
             Related Products
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -333,7 +333,7 @@ const ProductDetail = () => {
                       />
                     </div>
                     <div className="space-y-2">
-                      <h3 className="font-semibold text-lg text-gray-800" style={{ fontFamily: "'Fredoka One', cursive" }}>{relatedProduct.name}</h3>
+                      <h3 className="font-semibold text-lg text-gray-800" style={{ fontFamily: "'Fredoka One' " }}>{relatedProduct.name}</h3>
                       <div className="flex items-center gap-1">
                         <div className="flex">
                           {[...Array(5)].map((_, i) => (
