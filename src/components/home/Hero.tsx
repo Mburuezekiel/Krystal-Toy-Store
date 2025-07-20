@@ -194,7 +194,7 @@ export function Hero() {
                 isTransitioning ? 'translate-y-4 opacity-0' : 'translate-y-0 opacity-100'
               } ${titleComplete ? 'opacity-100' : 'opacity-0'}`}
               style={{ 
-                fontFamily: "'Fredoka One', 'Comic Sans MS'",
+                fontFamily: "'Fredoka One', 'Comic Sans MS','cursive'",
                 textShadow: '2px 2px 0px rgba(0,0,0,0.5)',
                 animationDelay: '0.2s'
               }}
