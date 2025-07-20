@@ -350,7 +350,7 @@ const ProductDetail = () => {
                           ({relatedProduct.rating})
                         </span>
                       </div>
-                      <span className="text-xl font-bold text-green-600">
+                      <span className="text-xl font-bold ">
                         KSh {relatedProduct.price.toLocaleString()}
                       </span>
                     </div>
