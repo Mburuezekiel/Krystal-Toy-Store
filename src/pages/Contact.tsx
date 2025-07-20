@@ -50,7 +50,7 @@ const Contact = () => {
       <main>
         <section className="py-16 bg-gradient-to-br from-yellow-50 via-blue-50 to-purple-50">
           <div className="container mx-auto px-4">
-            <Breadcrumbs />
+            {/* <Breadcrumbs /> */}
             <div className="max-w-4xl mx-auto text-center">
               <h1
                 className="text-5xl md:text-6xl font-black text-transparent bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text mb-6 drop-shadow-lg"
