@@ -257,7 +257,6 @@ export function Hero() {
           <Star className="w-6 h-6 text-yellow-300 animate-spin" style={{animationDuration: '8s', animationDirection: 'reverse'}} />
         </div>
       </div>
-
       <style jsx>{`
         @keyframes float {
           0%, 100% { transform: translateY(0px) rotate(0deg); }
