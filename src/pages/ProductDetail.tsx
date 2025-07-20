@@ -98,7 +98,7 @@ const ProductDetail = () => {
 
       <main className="container mx-auto px-4 py-8">
         <div className="flex items-center gap-2 mb-8">
-          <Link to="/products" className="flex items-center gap-2 text-gray-700 hover:text-purple-600 font-medium transition-colors" style={{ fontFamily: "'Fredoka One', cursive" }}>
+          <Link to="/toys" className="flex items-center gap-2 text-gray-700 hover:text-purple-600 font-medium transition-colors" style={{ fontFamily: "'Fredoka One', cursive" }}>
             <ArrowLeft className="h-4 w-4" />
             Back to Products
           </Link>
